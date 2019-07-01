@@ -2,7 +2,9 @@ body
   background: #FFF
   line-height: 1.4
   font-size: $fz
-  +reg
+  // +light
+  font-family: 'Comfortaa', cursive
+  font-weight: 300
   color: $c-text
   +no-scroll
 
@@ -15,3 +17,34 @@ input, textarea
   display: inline-block
   fill: currentColor
   font-size: inherit
+
+.container
+  max-width: 1440px
+  padding-left: 15px
+  padding-right: 15px
+  margin-left: auto
+  margin-right: auto
+
+.phones
+
+.phone
+  display: block
+  font-size: $fz-md
+  color: $purple
+  +bold
+  +hover
+    text-decoration: underline
+  &__icon
+    display: inline-block
+    width: 15px
+    .icon
+      font-size: $fz-sm
+
+.tm
+  +clar
+  sup
+    font-size: .5em
+    vertical-align: super
+  &--text
+    color: $c-text
+    

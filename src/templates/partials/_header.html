@@ -1,1 +1,77 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          {% include "partials/_logo.html" %}
+        </div>
+
+        <div class="header__nav">
+          {% include "partials/_nav.html" %}
+        </div>
+
+        <div class="header__controls">
+          <div class="header__lang">
+            <!-- begin lang -->
+            <div class="lang">
+              <div class="lang__title">Ru</div>
+              <div class="lang__list">
+                <a href="#" class="lang__link">Ua</a>
+              </div>
+            </div>
+            <!-- end lang -->
+            
+            {# 
+            {{ mixins.list(
+              name = 'lang',
+              modifications = { wrap: '', item: '', link: '' },
+              list = [
+                { item: '', link: 'Ua', modItem: '', modLink: '' }
+              ]
+            ) }} #}
+          </div>
+
+          <div class="header__cart">
+            <a href="#" class="cart-btn">
+              {{ mixins.icon('cart') }}
+              <sup>4</sup>
+            </a>
+          </div>
+
+          <div class="header__burger">
+            <a href="#" class="burger">{{ mixins.icon('burger') }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__title">Широкие возможности для игры и творчества</div>
+
+        <div class="header__btns">
+          {{ mixins.btn(
+            title = 'Сотрудничать',
+            mod = 'btn--transp-purple'
+          ) }}
+          <a href="mailto:magic@jaktak.com.ua" class="btn-link">{{ mixins.icon('envelope') }}magic@jaktak.com.ua</a>
+        </div>
+
+        <div class="header__contacts">
+          <!-- begin phones -->
+          <div class="phones">
+            <a href="tel:+380965264100" class="phone"><span class="phone__icon">{% include "partials/fucked-up-icons/_kyivstar.html" %}</span>+380965264100</a>
+            <a href="tel:+380955264100" class="phone"><span class="phone__icon">{{ mixins.icon('mts') }}</span>+380955264100</a>
+            <a href="tel:+380935264100" class="phone"><span class="phone__icon">{{ mixins.icon('life') }}</span>+380935264100</a>
+          </div>
+          <!-- end phones -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</header>
+<!-- end header -->

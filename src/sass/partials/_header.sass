@@ -1,0 +1,84 @@
+.header
+  background-color: $white
+  &__inner
+    height: $header-height
+    +flex(space-between, center)
+  &__top
+    box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.14)
+  &__logo
+    width: percentage(2/12)
+  &__title
+    +bold
+    font-size: $fz-lg
+  &__btns
+    flex-grow: 1
+    +flex(space-around, center)
+  &__nav
+    flex-grow: 1
+  &__controls
+    width: percentage(2/12)
+    +flex(flex-end, center)
+  &__burger
+    margin-left: 10px
+  &__cart
+    margin-left: 40px
+
+
+.cart-btn
+  color: $gray
+  position: relative
+  display: inline-block
+  +tr(color .3s)
+  +hover
+    color: $purple
+  .icon
+    font-size: 21px
+  sup
+    display: inline-block
+    vertical-align: top
+    font-size: 10px
+    color: $c-text
+    background-color: $yellow
+    border-radius: 50%
+    height: 16px
+    width: 16px
+    line-height: 16px
+    text-align: center
+    position: relative
+    top: -.8em
+    left: -.5em
+
+.burger
+  color: $gray
+  +tr(color .3s)
+  +hover
+    color: $purple
+  .icon
+    font-size: 21px
+
+.lang
+  $this: &
+  font-size: $fz-md
+  color: $gray
+  position: relative
+  padding-right: 15px
+  +before
+    +icon-arrow(10, 10, 1, currentColor, -45)
+    position: absolute
+    right: 0
+    top: .3em
+    pointer-events: none
+  +hover
+    #{$this}__list
+      visibility: visible
+      opacity: 1
+  &__title
+  &__list
+    position: absolute
+    width: 100%
+    left: 0
+    top: 100%
+    z-index: 1
+    visibility: hidden
+    opacity: 0
+    +tr(opacity .3s, visibility .3s)

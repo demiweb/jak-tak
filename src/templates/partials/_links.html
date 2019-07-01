@@ -1,0 +1,34 @@
+{%set
+links = [
+  { img: 'Italy-2-min.png', title: 'Италия' },
+  { img: 'Poland-2-min.png', title: 'Польша' },
+  { img: 'Ukraine-2-min.png', title: 'Украина' },
+  { img: '2.png', title: 'США' },
+  { img: 'Germany-2-min.png', title: 'Германия' },
+  { img: 'France-1-min.png', title: 'Франция' },
+  { img: 'Spain-2-min.png', title: 'Испания' }
+]
+%}
+
+<!-- begin links -->
+<div class="item-links">
+  {% for i in links %}
+  <!-- begin item-link -->
+  <a href="#" class="item-link">
+    <span class="item-link__img js-lazy" data-background-image="img/item-links/{{ i.img }}">
+      <span class="item-link__title">{{ i.title }}</span>
+    </span>
+
+    <span class="item-link__btn">
+      {{ mixins.btn(
+        title = 'Заказать',
+        mod = 'btn--full',
+        href = false,
+        isInline = true
+      ) }}
+    </span>
+  </a>
+  <!-- end item-link -->
+  {% endfor %}
+</div>
+<!-- end links -->

@@ -1,0 +1,30 @@
+.btn
+  display: inline-block
+  text-align: center
+  background-color: $accent
+  border: 2px solid  $accent
+  border-radius: 35px
+  padding: 17px 38px
+  +bold
+  color: $white
+  +tr(color .3s, background-color .3s, border-color .3s)
+
+  &--transp-purple
+    background-color: transparent
+    color: $purple
+    border-color: $purple
+    +hover
+      background-color: $purple
+      border-color: $purple
+      color: $white
+
+.btn-link
+  font-size: $fz-md
+  +reg
+  color: $purple
+  +inline-flex(flex-start, center)
+  +hover
+    text-decoration: underline
+  .icon
+    fill: $accent
+    margin-right: 10px

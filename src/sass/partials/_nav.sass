@@ -1,0 +1,28 @@
+.nav
+  ul
+    +flex(space-around, center)
+  li
+    display: inline-block
+    
+  a
+    display: block
+    position: relative
+    color: $gray
+    +tr(color .3s)
+    padding-top: 30px
+    padding-bottom: 30px
+    +bold
+    +hover
+      color: $purple
+      .ic
+        visibility: visible
+        opacity: 1
+    .ic
+      visibility: hidden
+      opacity: 0
+      +vcenter
+      z-index: 0
+      +tr(visibility .3s, opacity .3s)
+    span
+      position: relative
+      z-index: 1

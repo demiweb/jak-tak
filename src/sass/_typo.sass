@@ -1,6 +1,6 @@
 strong
-  font-weight: 400
-  +bold
+  // font-weight: 400
+  // +bold
 
 small
   font-size: inherit
@@ -12,8 +12,23 @@ h1, h2, h3, h4, h5, h6
   font-weight: 400
 
 .h1, h1
+  font-size: 36px
+  font-weight: 700
+  strong
+    +clar
+    sup
+      vertical-align: super
+      font-size: .5em
+
+  &--purple
+    color: $purple
 
 .h2, h2
+  font-size: 32px
+  font-weight: 700
+
+  &--accent
+    color: $accent
 
 .h3, h3
 

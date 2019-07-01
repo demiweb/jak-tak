@@ -1,0 +1,40 @@
+<!-- begin hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__top">
+      <div class="hero__title">
+        <h1 class="h1 h1--purple">Как Так? Спросите Вы. Игрушка {{ mixins.title() }}, которая Вас удивит!!!</h1>
+      </div>
+
+      <div class="hero__descr">
+        <!-- begin hero-descr -->
+        <div class="hero-descr">
+          <div class="hero-descr__title">6 <small>евро</small> - 12 <small>евро/шт</small> <span>(доставка по Украине бесплатная при заказе от 2 шт.)</span></div>
+
+          <div class="hero-descr__text text">Владея игрушкой - сувениром {{ mixins.title() }}  и использую
+            программу Live Portrait (дополненная реальность), Вы сможете 
+          сможете путешествовать по разным странам</div>
+        </div>
+        <!-- end hero-descr -->
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero__img">
+    <img data-src="img/home/hero-img.jpg" alt="" class="js-lazy">
+  </div>
+
+  <div class="container">
+    <div class="hero__title-bottom">
+      <h2 class="h2 h2--accent">Выберите свой {{ mixins.title('tm--text') }}</h2>
+    </div>
+
+    <div class="hero__arrow">
+      <div class="arrow-down"><span></span></div>
+    </div>
+  </div>
+
+  {% include "partials/_links.html" %}
+</section>
+<!-- end hero -->
