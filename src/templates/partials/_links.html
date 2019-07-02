@@ -15,7 +15,9 @@ links = [
   {% for i in links %}
   <!-- begin item-link -->
   <a href="#" class="item-link">
-    <span class="item-link__img js-lazy" data-background-image="img/item-links/{{ i.img }}">
+    {# <span class="item-link__img js-lazy" data-background-image="img/item-links/{{ i.img }}"> #}
+    <span class="item-link__img item-link-img">
+      <img data-src="img/item-links/{{ i.img }}" alt="" class="js-lazy">
       <span class="item-link__title">{{ i.title }}</span>
     </span>
 

@@ -1,0 +1,66 @@
+.slider
+  $this: &
+  &__wrap
+    position: relative
+  &__prev,
+  &__next
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    z-index: 1
+    display: inline-block
+    height: 45px
+    width: 45px
+    background-color: $yellow
+    color: $white
+    border-radius: 50%
+    +tr(color .3s)
+    +before
+      +icon-arrow(14, 14, 2, currentColor, 45)
+      display: inline-block
+      +vcenter
+      transform: translate(-50%, -50%) rotate(45deg)
+  &__prev
+    left: 0
+    +before
+      left: 25px
+  &__next
+    right: 0
+    transform: translate(0, -50%) rotate(180deg)
+    +before
+      left: 25px
+
+
+  &--center
+    &__wrap
+      .swiper-container
+        padding-top: 30px
+        padding-bottom: 30px
+        max-width: 1230px
+        margin-left: auto
+        margin-right: auto
+        // padding-left: 90px
+        // padding-right: 90px
+    .slide
+      +tr(transform .3s)
+      &.swiper-slide-active
+        +scale(1.2)
+        z-index: 1
+        .slide__img
+          +before
+            visibility: hidden
+            opacity: 0
+      &__img
+        border-radius: $radius
+        +before
+          +coverdiv
+          background-color: rgba($purple, .5)
+          border-radius: $radius
+          +tr(opacity .3s, visibility .3s)
+
+
+.slide
+  &__img
+    padding-top: 60%
+    +cover
+    position: relative

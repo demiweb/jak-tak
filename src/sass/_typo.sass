@@ -16,12 +16,17 @@ h1, h2, h3, h4, h5, h6
   font-weight: 700
   strong
     +clar
+    font-weight: 400
     sup
       vertical-align: super
       font-size: .5em
 
   &--purple
     color: $purple
+  &--accent
+    color: $accent
+  &--ttu
+    text-transform: uppercase
 
 .h2, h2
   font-size: 32px
@@ -37,3 +42,30 @@ h1, h2, h3, h4, h5, h6
 .h5, h5
 
 .h6, h6
+
+.title-under
+  position: relative
+  padding-bottom: 20px
+  +before
+    position: absolute    
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 0)
+    height: 7px
+    width: 30px
+    background-color: $accent
+    border-radius: 7px
+
+.title-bg
+  color: $white  
+  display: inline-block
+  position: relative
+  span
+    position: relative
+    z-index: 1
+  img
+    +vcenter
+    width: 105%
+    max-width: 105%
+    z-index: 0
+    pointer-events: none

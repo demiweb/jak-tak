@@ -1,28 +1,50 @@
 .item-links
-  +flex(space-between, center)
+  +flex(flex-start, normal, row, wrap)
   max-width: 1645px
   padding-left: 15px
   padding-right: 15px
   margin-left: auto
   margin-right: auto
+  padding-top: 50px
+  padding-bottom: 50px
 
 .item-link
-  display: block
+  $this: &
+  +flex(flex-start, normal, column)  
+  margin-right: 15px
+  margin-left: 15px
+  width: calc(#{percentage(1/7)} - 30px)
+  +hover
+    #{$this}__img
+      border-color: $blue
   &__img
-    background-color: $white
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09)
-    border-radius: 22px
-    margin-bottom: 20px
-    display: block
-    +cover
-    background-size: contain
-    padding-top: 80%
-    position: relative
+    
   &__title
     color: $blue
     font-weight: 700
-    font-size: $fz-md
-    position: absolute
-    bottom: 15px
-    left: 50%
-    transform: translate(-50%, 0)
+    display: block
+    // position: absolute
+    // bottom: 15px
+    // left: 50%
+    // transform: translate(-50%, 0)
+
+.item-link-img
+  background-color: $white
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09)
+  border-radius: $radius
+  margin-bottom: 20px
+  background-size: contain
+  flex-grow: 1
+  padding-top: 25px
+  padding-bottom: 15px
+  position: relative
+  overflow: hidden
+  +flex(flex-end, center, column)
+  border: 2px solid  $white
+  +tr(border-color .3s)
+  +hover
+    border-color: $blue
+  img
+    transform: translate(-20%, 0)
+    display: block
+    margin-bottom: 20px

@@ -1,0 +1,30 @@
+{%set
+items = [
+  { mod: 'is-red', icon: 'youtube', title: 'Узнавайте больше трюков', text: 'на нашем Youtube канале' },
+  { mod: 'is-green', icon: 'package', title: 'Фирменная упаковка ', text: 'это гарантия оригинала' },
+  { mod: 'is-orange', icon: 'like', title: 'Топ 10 лучших производителей', text: 'по версии Uamodna' }
+]
+%}
+
+<!-- begin section -->
+<section class="section bg-contain section--lg js-lazy" data-background-image="img/home/bg-info.png">
+  <div class="container">  
+    <!-- begin info-items -->
+    <div class="info-items">
+      {% for i in items %}
+      <!-- begin info-item -->
+      <div class="info-item">
+        <div class="info-item__icon {{ i.mod }}">{{ mixins.icon(i.icon) }}</div>
+
+        <div class="info-item__content">
+          <div class="info-item__title">{{ i.title }}</div>
+          <div class="info-item__text">{{ i.text }}</div>
+        </div>
+      </div>
+      <!-- end info-item -->
+      {% endfor %}
+    </div>
+    <!-- end info-items -->
+  </div>
+</section>
+<!-- end section -->

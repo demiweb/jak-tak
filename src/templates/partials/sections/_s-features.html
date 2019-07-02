@@ -1,0 +1,45 @@
+{%set
+features = [
+  { icon: 'gift', title: 'Отличная идея для подарка', img: '1.png' },
+  { icon: 'ecology', title: 'Экологичность материала', img: '2.png' },
+  { icon: 'wrench', title: '100 % ручная работа', img: '3.png' },
+  { icon: 'quality', title: 'Долговечность игрушки, ее нельзя сломать случайно', img: '4.png' },
+  { icon: 'partnership', title: 'Рекомендуется людям с инвалидностью', img: '5.png' },
+  { icon: 'magnet', title: 'Не содержит магнитов', img: '6.png' },
+  { icon: 'creativity', title: 'Развитие креативности', img: '7.png' },
+  { icon: 'touch-screen', title: 'Развитие моторики', img: '8.png' }
+]
+%}
+
+<!-- begin section -->
+<section class="section s-features pt-sm pb-md">
+  <div class="container">
+    <div class="section__title title-under">
+      <h2 class="h1 h1--accent h1--ttu">Новинка!!! </h2>
+      <h2 class="h2">Игрушка головоломка-сувенир {{ mixins.title() }} <div class="title-bg"><img data-src="img/bg-title.png" alt="" class="js-lazy"> <span>с дополненной реальностью</span></div></h2>
+    </div>
+    <div class="section__subttl">Уникальное сочетание Hand Made и современных технологий</div>
+
+    <div class="section__features">
+      <!-- begin features -->
+      <div class="features">
+        {% for i in features %}
+        <!-- begin feature -->
+        <div class="feature__wrap">
+          <div class="feature">
+            <div class="feature__icon js-lazy" data-background-image="img/features/{{ i.img }}">{{ mixins.icon(i.icon) }}</div>
+
+            <div class="feature__title">{{ i.title }}</div>
+          </div>
+        </div>
+        <!-- end feature -->
+        {% endfor %}
+      </div>
+      <!-- end features -->
+    </div>
+  </div>
+
+  <i class="section-icon ic ic-comet"></i>
+  <i class="section-icon ic ic-star2"></i>
+</section>
+<!-- end section -->

@@ -1,0 +1,21 @@
+.features
+  +flex(flex-start, normal, row, wrap)
+  margin-left: -15px
+  margin-right: -15px
+
+.feature
+  text-align: center
+  &__icon
+    +cover
+    background-size: contain
+    background-position: 0% 50%
+    +inline-flex(center, center)
+    width: 170px
+    height: 170px
+    .icon
+      fill: $white
+      font-size: 60px
+  &__wrap
+    padding-left: 15px
+    padding-right: 15px
+    width: 25%

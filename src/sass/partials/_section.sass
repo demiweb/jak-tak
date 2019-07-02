@@ -1,2 +1,76 @@
 .section
-  
+  +cover
+  position: relative
+  .container
+    position: relative
+    z-index: 1
+  &__title
+    text-align: center
+    margin-bottom: 20px
+  &__subttl
+    text-align: center
+    margin-bottom: 45px
+  &__video
+    padding-top: 40%
+    position: relative
+    overflow: hidden
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      min-width: 100%
+      min-height: 100%
+
+
+  &--lg
+    padding-top: $padding-lg
+    padding-bottom: $padding-lg
+
+.section-icon
+  position: absolute
+  z-index: 0
+  pointer-events: none
+
+.section-tv
+  +cover
+  background-size: contain
+  position: relative
+  img
+    position: absolute
+    width: 83.5%
+    top: 7%
+    left: 8%
+  &--left
+    max-width: 565px
+    padding-top: 420px
+
+.s-features
+  .section-icon
+    &.ic-comet
+      top: 10%
+      left: 3%
+    &.ic-star2
+      bottom: 15%
+      left: 5%
+
+.s-play  
+  padding-bottom: 160px
+  +before
+    position: absolute
+    width: 100%
+    height: 20%
+    background-color: $brown-light
+    z-index: 0
+    top: 0
+    left: 0
+  .section-icon
+    top: 50%
+    transform: translate(0, -50%)
+    &.ic-comet
+      left: 5%
+    &.ic-star4
+      right: 5%
+  .cloud
+    position: absolute
+    top: 40%
+    right: 30%

@@ -1,8 +1,25 @@
 .hero
-  background-color: $gray-lighten
+  // background-color: $gray-lighten
+  background-color: $white
   text-align: center
   padding-top: $padding-lg
   padding-bottom: 30px
+  position: relative
+  overflow: hidden
+  .container, .item-links
+    position: relative
+    z-index: 1
+  +before
+    position: absolute
+    background-color: $gray-lighten
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0)
+    width: 200vw
+    height: 80%
+    border-bottom-right-radius: 50%
+    border-bottom-left-radius: 50%
+    z-index: 0
   &__top
     +flex()
     position: relative
@@ -24,6 +41,9 @@
     text-align: left
   &__title-bottom
     margin-bottom: 25px
+  &__img
+    position: relative
+    z-index: 1
 
 .hero-descr
   &__title
@@ -33,10 +53,10 @@
     line-height: 1.1
     margin-bottom: 12px
     small
-      font-size: $fz
+      font-size: $fz-sm
       font-weight: 300
     span
-      font-size: $fz
+      font-size: $fz-sm
       color: $c-text
       display: block
       font-weight: 300
