@@ -1,0 +1,54 @@
+{%set
+slider = [
+  { imgActive: '', img: 'derevyannaya-golovolomka.png', active: true },
+  { imgActive: '', img: 'derevyannye-igrushki-optom.png' },
+  { imgActive: '', img: 'eko-igrushka.png' },
+  { imgActive: '', img: 'golovolomka-kupit-kiev.png' },
+  { imgActive: '', img: 'igrushka-anti-stress.png' },
+  { imgActive: '', img: 'igrushka-golovolomka.png' },
+  { imgActive: '', img: 'igrushka-golovolomka-JakTak.png' },
+  { imgActive: '', img: 'igrushka-jakTak.png' },
+  { imgActive: '', img: 'JakTak.png' }
+]
+%}
+
+<!-- begin section -->
+<section class="section s-gallery section--white pt-xl pb-lg">
+  <div class="s-gallery__bg js-lazy" data-background-image="img/home/bg-gallery.png"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <div class="section__title title-under title-under--green">
+          <h2 class="h2">Десятки трюков и фигур в Ваших руках!</h2>
+        </div>
+
+        <div class="section__subttl">Головоломка {{ mixins.title() }} – это возможность путешествовать: погружаться в динамичный ритм современных столиц или бродить по узким улочкам старинных городков</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- begin circle-gallery -->
+  <div class="circle-gallery js-carousel">
+    <div class="circle-gallery__slider">
+      {% for i in slider %}
+      <a href="#" class="circle-gallery__slide{% if i.active %} is-active{% endif %}">
+        <img data-src="img/carousel/icons/{{ i.img }}" alt="" class="js-lazy">
+        <img data-src="img/carousel/icons/white/{{ i.img }}" alt="" class="js-lazy">
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="circle-gallery__btns">
+      <div class="container">
+        <button class="circle-gallery__prev js-prev"><i class="ic ic-arrow-left-white"></i></button>
+        <button class="circle-gallery__next js-next"><i class="ic ic-arrow-right-white"></i></button>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- end circle-gallery -->
+
+  <div class="circle-gallery-img js-lazy" data-background-image="img/carousel/1.jpg"></div>
+</section>
+<!-- end section -->

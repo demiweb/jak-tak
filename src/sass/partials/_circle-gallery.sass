@@ -1,0 +1,102 @@
+.circle-gallery
+  position: relative
+  padding-top: 60px
+
+  &__slider
+    +tr(transform .3s)
+    +flex(center)
+    position: relative
+    height: 100vw
+    width: 100vw
+    +before
+      width: 93%
+      height: 93%
+      +vcenter
+      border: 2px solid  $white
+      z-index: 0
+      border-radius: 50%
+
+  &__slide
+    $width: 128px
+    $height: 128px
+    display: block
+    position: absolute
+    z-index: 1
+    width: $width
+    height: $height
+    background-color: $white
+    border: 3px solid  $white
+    border-radius: 50%
+    font-size: 0
+    img
+      +vcenter
+      &:nth-child(2)
+        display: none
+    &.is-active
+      background-color: $green-dark
+      img
+        &:nth-child(1)
+          display: none
+        &:nth-child(2)
+          display: block
+    &:nth-child(1)
+      top: 0
+      left: 50%
+      margin-left: calc(0px - (#{$width}/2))
+      // margin-left: -3vw
+      // margin-top: -4vw
+    &:nth-child(2)
+      top: 10.8%
+      right: 16.5%
+    &:nth-child(3)
+      top: 38.2%
+      right: 0.7%
+    &:nth-child(4)
+      bottom: 23%
+      right: 6.2%
+    &:nth-child(5)
+      bottom: 2.9%
+      left: 61.9%
+    &:nth-child(6)
+      bottom: 2.8%
+      right: 62%
+    &:nth-child(7)
+      bottom: 23.1%
+      left: 6.2%
+    &:nth-child(8)
+      top: 38%
+      left: 0.8%
+    &:nth-child(9)
+      top: 10.8%
+      left: 16.5%
+  &__prev,
+  &__next
+    position: absolute
+    z-index: 1
+    top: 0
+    background-color: transparent
+  &__prev
+    left: 0
+  &__next
+    right: 0
+  &__btns
+    position: absolute
+    width: 100%
+    z-index: 1
+    top: 0
+    left: 0
+
+
+.circle-gallery-img
+  // padding-top: 100%
+  // width: 20%
+  position: absolute
+  bottom: 0
+  z-index: 2
+  left: 50%
+  transform: translate(-50%, 0)
+  background-color: $gray
+  +cover
+  border-radius: $radius
+  width: 330px
+  height: 330px

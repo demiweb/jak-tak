@@ -1,0 +1,63 @@
+{%set
+items = [
+  {
+    mod: 'about-item--text-top',
+    img: 'img-1.jpg',
+    title: 'Игрушка' + mixins.title() + 'у ребенка развивает наблюдательность, усидчивость, 
+фантазию, а также воображение, помогает познать себя самого и совладать со своими эмоциями. ',
+    label: {
+      title: '<div>Детям</div>  +3',
+      mod: 'is-yellow'
+    }
+  },
+  {
+    img: 'img-2.jpg',
+    title: 'Для взрослых' + mixins.title() + 'послужит игрушкой – антистрессом, способным разрядить обстановку напряженных будней и поднять настроение.',
+    label: {
+      title: '<div>Взрослым</div>  +18 — ∞',
+      mod: 'is-blue'
+    }
+  },
+  {
+    img: 'img-3.jpg',
+    title: 'JacTak рекомендован людям с инвалидностью для реабилитации: развивает моторику, воображение, реакцию и внимание.',
+    label: {
+      title: '<small>Инклюзивность</small>' + mixins.icon('disabled'),
+      mod: 'is-purple'
+    }
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section s-three-img pt-xl pb-lg">
+  <div class="container">
+    <div class="section__title title-under">
+      <h2 class="h2">{{ mixins.title() }} интересен и полезен всем!</h2>
+    </div>
+
+    <div class="section__subttl">
+      Игрушка {{ mixins.title() }} порадуют и детей, и взрослых, заставив их не один раз 
+      удивленно воскликнуть: «Как так?!». 
+    </div>
+
+    <!-- begin about-items -->
+    <div class="about-items">
+      {% for i in items %}
+      <!-- begin about-item -->
+      <div class="about-item{% if i.mod %} {{ i.mod }}{% endif %}" >
+        <div class="about-item__inner js-lazy" data-background-image="img/home/{{ i.img }}">
+          <div class="about-item__title">{{ i.title | safe }}</div>
+
+          <div class="about-item__label {{ i.label.mod }}">
+            {{ i.label.title | safe }}
+          </div>
+        </div>
+      </div>
+      <!-- end about-item -->
+      {% endfor %}
+    </div>
+    <!-- end about-items -->
+  </div>
+</section>
+<!-- end section -->

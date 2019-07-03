@@ -1,0 +1,60 @@
+.about-items
+  +flex(center, normal, row, wrap)
+
+.about-item
+  $this: &
+  padding-left: 15px
+  padding-right: 15px
+  width: 50%
+  +flex()
+  margin-bottom: 30px
+  color: $white
+  padding-top: 40px
+  &__inner
+    +cover
+    position: relative
+    padding-top: 65%
+    width: 100%
+    border-radius: $radius
+    +before
+      +coverdiv
+      z-index: 0
+      border-radius: $radius
+      background-color: rgba($purple, .6)
+  &__label
+    position: absolute
+    z-index: 1
+    top: -40px
+    right: 0
+    border-radius: $radius
+    background-color: $gray
+    height: 235px
+    width: 200px
+    +flex(center, center, column)
+    text-align: center
+    font-weight: 700
+    font-size: 32px
+    small
+      font-size: 18px
+      margin-bottom: 15px
+    .icon
+      font-size: 80px
+    &.is-yellow
+      background-color: $yellow
+    &.is-blue
+      background-color: $purple
+    &.is-purple
+      background-color: $purple-accent
+  &__title
+    position: absolute
+    z-index: 1
+    bottom: 30px
+    left: 0
+    padding-left: 30px
+    padding-right: 30px
+  
+  &--text-top
+    #{$this}__title
+      top: 30px
+      bottom: auto
+      max-width: calc(100% - 200px)
