@@ -1,0 +1,25 @@
+.input
+  input
+    font-size: $fz-sm
+    height: 30px
+    border-bottom: 1px solid  $gray-light
+    +tr(border-color .3s)
+    width: 100%
+    &:focus
+      border-color: $accent
+    +placeholder
+      color: $gray-light
+
+.textarea
+  textarea
+    border: 1px solid  $gray-light
+    resize: none
+    padding: 15px
+    border-radius: $radius-sm
+    width: 100%
+    min-height: 100px
+    +tr(border-color .3s)
+    &:focus
+      border-color: $accent
+    +placeholder
+      color: $gray-light

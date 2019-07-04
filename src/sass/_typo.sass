@@ -36,6 +36,8 @@ h1, h2, h3, h4, h5, h6
     color: $accent
 
 .h3, h3
+  font-size: $fz-lg
+  font-weight: 700
 
 .h4, h4
 
@@ -58,6 +60,16 @@ h1, h2, h3, h4, h5, h6
   &--green
     +before
       background-color: $green-dark
+  &--green-lighten
+    +before
+      background-color: $green-lighten
+  &--left
+    +before
+      left: 0
+      transform: translate(0, 0)
+  &--yellow
+    +before
+      background-color: $yellow
 
 .title-bg
   color: $white  

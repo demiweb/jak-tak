@@ -1,0 +1,86 @@
+<!-- begin section -->
+<section class="section s-two-colored">
+ <div class="s-two-colored__top js-lazy" data-background-image="img/home/bg-print.png">
+  <img data-src="img/wave-two-colored-top.svg" alt="" class="wave wave--top js-lazy">  
+
+  <div class="container">
+     <div class="row">
+       <div class="col-6 offset-6">
+         <div class="s-two-colored__title title-under title-under--left">
+           <h2 class="h2">Ультрафиолетовая печать — относительно новая технология печати, которую мы применили в {{ mixins.title() }}</h2>
+         </div>
+
+         <div class="s-two-colored__list">
+           <div class="s-two-colored__list-title">Эта технология имеет ряд преимуществ:</div>
+
+           {{ mixins.list(
+             name = 'list',
+             modifications = { wrap: '', item: '', link: '' },
+             list = [
+              { item: 'Экологичность красок' },
+              { item: 'Не выгорает, устойчива к факторам внешнего воздействия;' },
+              { item: 'Имеет качественную, яркую, насыщенную картинку' }
+             ]
+           ) }}
+         </div>
+
+         <div class="s-two-colored__btn">
+           {{ mixins.btn(
+             title = 'Убедиться лично',
+             mod = ''
+           ) }}
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+  
+ <div class="s-two-colored__bottom pt-xl pb-xl js-lazy" data-background-image="img/home/bg-blue.png">
+  <img data-src="img/wave-two-colored-bottom.svg" alt="" class="wave wave--bottom js-lazy"> 
+  
+   <div class="container">
+    <div class="section__title section__title-mb-lg">
+      <h2 class="h2">{{ mixins.title() }} - это не просто игрушка:</h2>
+    </div>
+     <div class="row">
+       <div class="col-7">
+         <div class="s-two-colored__list">
+           <div class="s-two-colored__list-title-lg">
+             <h3 class="h3">{{ mixins.title() }} - это отличная головоломка:</h3>
+           </div>
+
+           {{ mixins.list(
+             name = 'list',
+             modifications = { wrap: '', item: '', link: '' },
+             list = [
+               { item: 'Развивает мышление' },
+               { item: 'Вызывает вопросы, надо которыми хочеться думать снова и снова' },
+               { item: 'Точно вызовет интерес даже у самых смышленых' },
+               { item: 'Рекомендован детям для изучения букв, цифр, геометрических фигур' }
+             ]
+           ) }}
+         </div>
+       </div>
+
+       <div class="col-5">
+         <div class="s-two-colored__list">
+           <div class="s-two-colored__list-title-lg">
+             <h3 class="h3">{{ mixins.title() }} - это отличный подарок для ваших близких:</h3>
+           </div>
+
+           {{ mixins.list(
+             name = 'list',
+             modifications = { wrap: '', item: '', link: '' },
+             list = [
+               { item: 'Не содержит вредных веществ' },
+               { item: 'Вызывает эмоции с первого касания' },
+               { item: 'Всегда создаст настроение в большой компании' }
+             ]
+           ) }}
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+<!-- end section -->

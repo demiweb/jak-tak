@@ -1,0 +1,108 @@
+.how
+  $this: &
+  color: $white
+  position: relative
+  margin-bottom: 125px
+
+  &__cards
+    +flex(flex-start, center)
+    padding-top: $padding-lg
+  &__block
+    height: 100vh
+    +flex(center, normal, column)
+    position: relative
+  &__arrow
+      position: absolute
+      top: 25px
+      right: calc(100% + 70px)
+  &__block-right
+    // text-align: right
+    max-width: 375px
+    margin-left: auto
+  &__block-in
+    position: relative
+  &__bg
+    +cover
+    position: absolute
+    z-index: 0
+    top: 0
+    bottom: 0
+  &__title
+    margin-bottom: 15px
+  &__form
+    height: 100%
+    +flex(flex-end, center)
+  &__left
+    position: absolute
+    left: 0
+    top: 20px
+    bottom: 20px
+    width: 60%
+    z-index: -1
+    +cover
+    background-position: 50% 0
+
+  
+  &--price
+    +before
+      background-color: $yellow-dark
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      width: 35%
+      z-index: 0
+    #{$this}__bg
+      right: 0
+      width: 50%
+      // background-size: contain
+      background-position: 0 50%
+
+  &--form
+    +before
+      background-color: $green-light
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 55%
+      z-index: 0
+    #{$this}__bg
+      left: 0
+      width: 70%
+      // background-size: contain
+      background-position: 100% 50%
+    #{$this}__arrow
+      right: auto
+      left: calc(100% + 150px)
+      top: 20px
+    #{$this}__block-in
+      max-width: 350px
+
+  &--contacts
+    +before
+      background-color: $blue-light
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      width: 35%
+      z-index: 0
+    .cloud
+      top: 20px
+      right: 30%
+      position: absolute
+    #{$this}__bg
+      right: 0
+      width: 50%
+      z-index: 1
+      // background-size: contain
+      background-position: 0 50%
+    #{$this}__arrow
+      right: calc(100% + 40px)
+      top: 15px
+    #{$this}__block-in
+      max-width: 330px
+    #{$this}__left
+      z-index: 0
+

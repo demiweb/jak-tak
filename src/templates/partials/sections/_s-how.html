@@ -1,0 +1,174 @@
+{%set
+price = [
+  {
+    mod: '',
+    title: 'опт',
+    price: ' <small>от</small>6<small>евро</small>'
+  },
+  {
+    mod: 'price-card--accent',
+    title: 'розница <small>Цена за 1 шт:</small>',
+    price: '12<small>евро</small>'
+  }
+]
+%}
+
+{%set
+form = [
+  { name: 'input', mod: '', type: 'text', placeholder: 'Имя', fieldClass: '' },
+  { name: 'input', mod: '', type: 'email', placeholder: 'E-mail', fieldClass: '' },
+  { name: 'input', mod: '', type: 'tel', placeholder: 'Телефон', fieldClass: '' },
+  { name: 'textarea', mod: '', placeholder: 'Введите ваш вопрос', fieldClass: '' }
+]
+%}
+
+<!-- begin section -->
+<section class="section s-how">
+  <div class="container">
+    <div class="section__title title-under">
+      <h2 class="h2">Как заказать {{ mixins.title() }}?</h2>
+    </div>
+
+    <div class="section__subttl">Головоломку {{ mixins.title() }} можно купить оптом в Украине</div>
+  </div>
+
+    <!-- begin how -->
+    <div class="how how--price js-lazy">
+      <div class="how__bg js-lazy" data-background-image="img/home/how/orange.png"></div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="how__cards">
+              {% for i in price %}
+              <!-- begin price-card -->
+              <div class="price-card{% if i.mod %} {{ i.mod }}{% endif %}">
+                <div class="price-card__title">{{ i.title | safe }}</div>
+
+                <div class="price-card__price">{{ i.price | safe }}</div>
+
+                <div class="price-card__btn">
+                  {{ mixins.btn(
+                    title = 'Заказать',
+                    mod = ''
+                    ) }}
+                  </div>
+                </div>
+                <!-- end price-card -->
+                {% endfor %}
+              </div>
+          </div>
+
+          <div class="col-6">
+            <div class="how__block how__block-right">
+              <div class="how__block-in">
+                <div class="how__arrow"><i class="ic ic-arr-yellow"></i></div>
+
+                <div class="how__title title-under title-under--left title-under--yellow">
+                  <h3 class="h3">Ознакомьтесь с ценами на уникальную игрушку современности {{ mixins.title() }} </h3>
+                </div>
+
+                <div class="how__text">{{ mixins.title() }} доступна как для оптовых покупателей, так и для тех, кто просто хочет побаловать себя новой игрушкой</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end how -->
+
+    <!-- begin how -->
+    <div class="how how--form js-lazy">
+      <div class="how__bg js-lazy" data-background-image="img/home/how/green.png"></div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <div class="how__block">
+              <div class="how__block-in">
+                <div class="how__arrow"><i class="ic ic-arr-green"></i></div>
+
+                <div class="how__title title-under title-under--left title-under--green-lighten">
+                  <h3 class="h3">Возникли вопросы? Задайте их прямо сейчас!</h3>
+                </div>
+
+                <div class="how__text">Оставьте, пожалуйста, свои данные в форме справа</div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="how__form">
+              <!-- begin form -->
+              <div class="form">
+                <form>
+                  <div class="form__title">
+                    <h2 class="h2">Задать вопрос</h2>
+                  </div>
+
+                  {% for i in form %}
+                  <div class="form__field">
+                    {{ mixins.input(
+                      name = i.name,
+                      mod = i.mod,
+                      type = i.type,
+                      placeholder = i.placeholder,
+                      value = '',
+                      fieldClass = i.fieldClass
+                    ) }}
+                  </div>
+                  {% endfor %}
+
+                  <div class="form__btn">
+                    {{ mixins.btn(
+                      title = 'Отправить',
+                      mod = 'btn--full',
+                      href = false
+                    ) }}
+                  </div>
+                </form>
+              </div>
+              <!-- end form -->
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+    <!-- end how -->
+
+    <!-- begin how -->
+    <div class="how how--contacts js-lazy">
+      <div class="how__bg js-lazy" data-background-image="img/home/how/blue.png"></div>
+
+      <div class="how__left js-lazy" data-background-image="img/home/how/contacts.jpg">
+        <div class="cloud cloud--black js-lazy" data-background-image="img/cloud-2.jpg"><div class="cloud__title"><strong>Здравствуйте!</strong> Это магазин «ЯкТАК»</div></div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-9">
+            
+          </div>
+
+          <div class="col-3">
+            <div class="how__block how__block-right">
+              <div class="how__block-in">
+                <div class="how__arrow"><i class="ic ic-arr-white"></i></div>
+
+                <div class="how__title title-under title-under--left title-under--yellow">
+                  <h3 class="h3">Мы свяжемся с вами!</h3>
+                </div>
+
+                <div class="how__text">Наш менеджер свяжется с вами и поможет вам подобрать свой обственный {{ mixins.title() }}</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end how -->
+</section>
+<!-- end section -->

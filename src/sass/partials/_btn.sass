@@ -4,11 +4,14 @@
   background-color: $accent
   border: 2px solid  $accent
   border-radius: 35px
-  padding: 17px 38px
+  padding: 17px 65px
   font-size: $fz-sm
   +bold
   color: $white
   +tr(color .3s, background-color .3s, border-color .3s)
+  +hover
+    background-color: transparent
+    color: $accent
 
   &--transp-purple
     background-color: transparent
@@ -22,6 +25,9 @@
     padding-left: 5px
     padding-right: 5px
     width: 100%
+  &--sm
+    padding-left: 38px
+    padding-right: 38px
 
 .btn-link
   +reg
