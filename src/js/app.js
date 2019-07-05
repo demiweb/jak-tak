@@ -3,6 +3,7 @@ import setTouchClassName from './components/setTouchClassName';
 import setLazy from './components/setLazy';
 import setSliders from './components/setSliders';
 import setCircleSlider from './components/setCircleSlider';
+import toggleMenu from './components/toggleMenu';
 
 $(function() {
   // sayHello();
@@ -10,4 +11,5 @@ $(function() {
   setLazy();
   setSliders();
   setCircleSlider();
+  toggleMenu();
 });

@@ -1,0 +1,26 @@
+.testimonial
+  background-color: $brown-light
+  border-radius: $radius
+  padding: 60px 35px 35px 120px
+  color: $gray
+  +flex(space-between, normal, column)
+  height: 100%
+  font-size: $fz-sm
+  &__quote
+    margin-bottom: 20px
+  &__bottom
+    +flex(flex-start, center)
+  &__img
+    +cover
+    width: 90px
+    height: 90px
+    flex: 0 0 90px
+    border-radius: 50%
+    display: block
+    border: 1px solid  $gray-light
+    margin-right: 25px
+  &__title
+    font-size: 21px
+    font-weight: 700
+    margin-bottom: 5px
+  &__subttl

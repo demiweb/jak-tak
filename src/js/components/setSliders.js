@@ -23,8 +23,23 @@ export default function setSliders() {
           nextEl: next,
           prevEl: prev
         },
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            centeredSlides: false
+          }
+        },
         on: {
           init: setLazy
+        }
+      },
+      testimonials: {
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: next,
+          prevEl: prev
         }
       }
     };

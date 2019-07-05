@@ -1,8 +1,16 @@
 .nav
+  +lg
+    text-align: center
   ul
     +flex(space-around, center)
+    +lg
+      display: block
   li
     display: inline-block
+    +lg
+      display: block
+      +notlast
+        margin-bottom: 15px
     
   a
     display: block
@@ -17,6 +25,8 @@
       .ic
         visibility: visible
         opacity: 1
+    +lg
+      padding: 0
     .ic
       visibility: hidden
       opacity: 0
@@ -26,3 +36,36 @@
     span
       position: relative
       z-index: 1
+
+  &--footer
+    color: $gray-darken
+    ul
+      display: block
+    li
+      display: block
+      +notlast
+        margin-bottom: 20px
+    a
+      padding: 0
+      font-size: $fz-sm
+      font-weight: 300
+      +hover
+        color: $accent
+  &--sm
+    font-size: $fz-sm
+    ul
+      display: block
+    li
+      display: block
+      +notlast
+        margin-bottom: 15px
+      +lg
+        display: inline-block
+        margin-right: 5px
+        margin-left: 5px
+        +notlast
+          margin-bottom: 0
+    a
+      padding: 0
+      +hover
+        color: $accent

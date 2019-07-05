@@ -12,7 +12,8 @@ h1, h2, h3, h4, h5, h6
   font-weight: 400
 
 .h1, h1
-  font-size: 36px
+  // font-size: 36px
+  +css-lock(21, 36, 320, 1199, font-size)
   font-weight: 700
   strong
     +clar
@@ -31,6 +32,7 @@ h1, h2, h3, h4, h5, h6
 .h2, h2
   font-size: 32px
   font-weight: 700
+  +css-lock(21, 32, 320, 1199, font-size)
 
   &--accent
     color: $accent
@@ -57,6 +59,8 @@ h1, h2, h3, h4, h5, h6
     width: 30px
     background-color: $accent
     border-radius: 7px
+  +xs
+    padding-bottom: 15px
   &--green
     +before
       background-color: $green-dark
@@ -75,6 +79,8 @@ h1, h2, h3, h4, h5, h6
   color: $white  
   display: inline-block
   position: relative
+  +sm
+    color: inherit
   span
     position: relative
     z-index: 1
@@ -84,3 +90,5 @@ h1, h2, h3, h4, h5, h6
     max-width: 105%
     z-index: 0
     pointer-events: none
+    +sm
+      display: none

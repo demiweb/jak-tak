@@ -1,0 +1,74 @@
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="footer__logo">
+          {% include "partials/_logo.html" %}
+        </div>
+
+        <div class="footer__descr">Иргушка-головоломка JakTak Довольными остаются 9,6 из 10 человек, которые выбрали нас! </div>
+
+        <div class="footer__auth">Разработка сайта: <a href="#"><img data-src="img/demiweb.png" alt="" class="js-lazy"></a></div>
+      </div>
+      <div class="col-3">
+        <div class="footer__block">
+          <div class="footer__title">
+            <h2 class="h2">Важное</h2>
+          </div>
+          {{ mixins.list(
+            name = 'nav',
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = [
+              { link: 'Заказать <span class="tm tm--inherit">JakTak<sup>&reg;</sup></span>' },
+              { link: 'Сотрудничество' },
+              { link: 'Преимущества' },
+              { link: 'Кому подойдет' }
+            ]
+          ) }}
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="footer__block">
+          <div class="footer__title">
+            <h2 class="h2">Информация</h2>
+          </div>
+
+          {{ mixins.list(
+            name = 'nav',
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = [
+              { link: 'Галерея' },
+              { link: 'Цены' },
+              { link: 'Оплата и доставка' },
+              { link: 'Отзывы' }
+            ]
+          ) }}
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="footer__block">
+          <div class="footer__title">
+            <h2 class="h2">Контакты</h2>
+          </div>
+
+          {{ mixins.list(
+            name = 'nav',
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = [
+              { link: '+380965264100' , href: 'tel:+380965264100' },
+              { link: '+380955264100' , href: 'tel:+380955264100' },
+              { link: '+380935264100' , href: 'tel:+380935264100' },
+              { link: 'magic@jaktak.com.ua', href: 'mailto:magic@jaktak.com.ua'  }
+            ]
+          ) }}
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="footer__copy"><span>JakTak</span> &copy; 2019. Все права защищены</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

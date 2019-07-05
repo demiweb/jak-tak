@@ -66,6 +66,7 @@
     "select-custom": "^1.0.7",
     "slick-carousel": "^1.8.1",
     "swiper": "^4.5.0",
+    "throttle-debounce": "^2.1.0",
     "vinyl-buffer": "^1.0.0",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^2.11.1",

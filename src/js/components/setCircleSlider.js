@@ -7,6 +7,7 @@ class Carousel {
     this.$prev = this.$carousel.find('.js-prev');
     this.$next = this.$carousel.find('.js-next');
     this.$slides = this.$slider.children();
+    this.$content = $('.js-carousel-content');
     this.step = 40;
     this.angle = 0;
     this.current = 0;
@@ -18,6 +19,24 @@ class Carousel {
 
   get currentAngle() {
     return this.$slider.css('transform');
+  };
+
+  get $title() {
+    return this.$content.find('.js-carousel-title');
+  };
+
+  get $img() {
+    return this.$content.find('.js-carousel-img');
+  };
+
+  changeContent() {
+    const title = this.$slides[this.next].getAttribute('data-title');
+    const img = this.$slides[this.next].getAttribute('data-img');   
+
+    this.$title.text(title);
+    this.$img.css({
+      backgroundImage: `url("${img}")`
+    });
   };
 
   rotateCarousel(e) {
@@ -36,7 +55,6 @@ class Carousel {
 
       const difference = this.next - $(this.$slides[this.current]).index();
 
-      console.log(difference);
       // this.angle = this.next * -this.step;
       const breakpoint = 360 - this.step*2;
 
@@ -108,8 +126,12 @@ class Carousel {
       transform: `rotate(${-this.angle}deg)`
     });
 
+    // behaviour goes here
     this.$slides.removeClass(ACTIVE);
     $(this.$slides[this.next]).addClass(ACTIVE);
+
+    this.changeContent();
+
 
     this.current = this.next;    
   };

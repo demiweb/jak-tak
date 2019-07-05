@@ -1,0 +1,36 @@
+<!-- begin tooltip-menu -->
+<div class="tooltip-menu js-menu" data-menu="tooltip_menu">
+  <div class="tooltip-menu__nav">
+    {{ mixins.list(
+      name = 'nav',
+      modifications = { wrap: 'nav--sm', item: '', link: '' },
+      list = [
+        { link: 'Live portrait ' },
+        { link: 'Десятки трюков' },
+        { link: 'Кому подойдет' },
+        { link: 'Отзывы' }
+      ]
+    ) }}
+  </div>
+
+  <div class="tooltip-menu__bottom">
+    <div class="tooltip-menu__social">
+      {{ mixins.list(
+        name = 'social',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: mixins.icon('instagram') },
+          { link: mixins.icon('youtube') },
+          { link: mixins.icon('facebook') }
+        ]
+      ) }}
+    </div>
+
+    <div class="tooltip-menu__text">Иргушка-головоломка JakTak. Довольными 
+      остаются 9,6 из 10 человек, которые выбрали нас!  Наши услуги оценили
+    уже 357 человек.</div>
+  </div>
+
+  
+</div>
+<!-- end tooltip-menu -->

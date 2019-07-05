@@ -1,13 +1,19 @@
 .list
   li
     position: relative
+    padding-left: 25px
     +notlast
       margin-bottom: 10px
+    +sm
+      padding-left: 15px
     +before
       width: 10px
       height: 5px
       border-radius: 5px
       background-color: $accent
       display: inline-block
-      margin-right: 10px
-      vertical-align: middle
+      // margin-right: 10px
+      // vertical-align: middle
+      position: absolute
+      left: 0
+      top: .5em

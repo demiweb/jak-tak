@@ -1,10 +1,43 @@
+{%set
+testimonials = [
+  {
+    quote: 'Купила сегодня на фестивале Made in Ukraine игрушку-головоломку. Помимо своих волшебных свойств, обладает ещё
+и хорошим эстетическим видом, 
+приятная на ощупь.
+Спасибо автору!',
+    img: 'testimonial-1.jpg',
+    title: 'Ольга Пазычко',
+    subttl: 'Мама'
+  },
+  {
+    quote: 'Отличная игрушка, ребёнок весь вечер выдумываете разные фигуры, только и слышно - "мама, папа, смотрите!".',
+    img: 'testimonial-2.jpg',
+    title: 'Маргарита Буржинская',
+    subttl: 'Мама'
+  },
+  {
+    quote: 'Купила сегодня на фестивале Made in Ukraine игрушку-головоломку. Помимо своих волшебных свойств, обладает ещё
+и хорошим эстетическим видом, 
+приятная на ощупь.
+Спасибо автору!',
+    img: 'testimonial-1.jpg',
+    title: 'Ольга Пазычко',
+    subttl: 'Мама'
+  },
+  {
+    quote: 'Отличная игрушка, ребёнок весь вечер выдумываете разные фигуры, только и слышно - "мама, папа, смотрите!".',
+    img: 'testimonial-2.jpg',
+    title: 'Маргарита Буржинская',
+    subttl: 'Мама'
+  }
+]
+%}
+
 <!-- begin section -->
-<section class="section s-testimonials">
+<section class="section s-testimonials pt-lg pb-md">
   <div class="container">
     <div class="row">
       <div class="col-6 offset-3">
-
-
         <div class="section__title title-under">
           <h2 class="h2">Что говорят об {{ mixins.title() }}! </h2>
         </div>
@@ -12,6 +45,49 @@
         <div class="section__subttl">Читайте отзывы наших клиентов и убеждайтесь в качестве уникальной игрушки {{ mixins.title() }}</div>
       </div>
     </div>
+
+    <div class="s-testimonials__slider">
+      <div class="row">
+        <div class="col-10 offset-1">
+
+
+          <!-- begin slider -->
+          <div class="slider__wrap slider--testimonials__wrap">
+            <div class="swiper-container js-slider" data-slider="testimonials">
+              <div class="slider slider--testimonials swiper-wrapper">
+                {% for i in testimonials %}
+                <!-- begin slide -->
+                <div class="slide swiper-slide">
+                  <!-- begin testimonial -->
+                  <div class="testimonial">
+                    <blockquote class="blockquote testimonial__quote">
+                      <div class="blockquote__icon">{{ mixins.icon('quotation') }}</div>
+                      {{ i.quote | safe }}
+                    </blockquote>
+
+                    <div class="testimonial__bottom">
+                      <div class="testimonial__img js-lazy" data-background-image="img/home/{{ i.img }}"></div>
+                      <div class="testimonial__sign">
+                        <div class="testimonial__title">{{ i.title }}</div>
+                        <div class="testimonial__subttl">{{ i.subttl }}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end testimonial -->
+                </div>
+                <!-- end slide -->
+                {% endfor %}
+              </div>
+            </div>
+
+            <button class="slider__prev slider__prev-simple js-prev"></button>
+            <button class="slider__next slider__next-simple js-next"></button>
+          </div>
+          <!-- end slider -->
+        </div>
+      </div>
+    </div>
+    
   </div>
 </section>
 <!-- end section -->

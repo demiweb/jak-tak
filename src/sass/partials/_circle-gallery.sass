@@ -1,6 +1,8 @@
 .circle-gallery
   position: relative
   padding-top: 60px
+  +md
+    padding-top: 30px
 
   &__slider
     +tr(transform .3s)
@@ -15,10 +17,20 @@
       border: 2px solid  $white
       z-index: 0
       border-radius: 50%
+      +md
+        // width: 86%
+        // height: 86%
+      +xs
+        width: 88%
+        height: 88%
 
   &__slide
     $width: 128px
     $height: 128px
+    $width-md: 90px
+    $height-md: 90px
+    $width-sm: 60px
+    $height-sm: 60px
     display: block
     position: absolute
     z-index: 1
@@ -28,6 +40,12 @@
     border: 3px solid  $white
     border-radius: 50%
     font-size: 0
+    +md
+      width: $width-md
+      height: $height-md
+    +sm
+      width: $width-sm
+      height: $height-sm
     img
       +vcenter
       &:nth-child(2)
@@ -43,8 +61,10 @@
       top: 0
       left: 50%
       margin-left: calc(0px - (#{$width}/2))
-      // margin-left: -3vw
-      // margin-top: -4vw
+      +md
+        margin-left: calc(0px - (#{$width-md}/2))
+      +sm
+        margin-left: calc(0px - (#{$width-sm}/2))
     &:nth-child(2)
       top: 10.8%
       right: 16.5%
@@ -75,28 +95,49 @@
     z-index: 1
     top: 0
     background-color: transparent
+    +md
+      width: 100px
+      height: 45.6px
+      .ic
+        +vcenter
+        transform: translate(-50%, -50%) scale(.4)
   &__prev
     left: 0
+    +md
+      left: 15px
   &__next
     right: 0
+    +md
+      right: 15px
   &__btns
     position: absolute
     width: 100%
     z-index: 1
     top: 0
     left: 0
+  &__content
+    width: 18%
+    position: absolute
+    bottom: 0
+    z-index: 2
+    left: 50%
+    transform: translate(-50%, 0)
+    
+    // width: 330px
+    // height: 330px
+    +sm
+      width: 150px
+      // height: 150px
+      padding-top: 0
+    +xs
+      width: 100px
 
-
-.circle-gallery-img
-  // padding-top: 100%
-  // width: 20%
-  position: absolute
-  bottom: 0
-  z-index: 2
-  left: 50%
-  transform: translate(-50%, 0)
-  background-color: $gray
-  +cover
-  border-radius: $radius
-  width: 330px
-  height: 330px
+  &__img
+    // +coverdiv
+    +cover
+    border-radius: $radius
+    background-color: $gray
+    padding-top: 100%
+  &__title
+    text-align: center
+    margin-bottom: 10px

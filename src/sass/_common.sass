@@ -7,6 +7,8 @@ body
   font-weight: 300
   color: $c-text
   +no-scroll
+  +sm
+    font-size: $fz-sm
 
 input, textarea
   font-family: inherit
@@ -18,26 +20,58 @@ input, textarea
 
 .pt-xl
   padding-top: $padding-xl
+  +lg
+    padding-top: $padding-lg
+  +md
+    padding-top: $padding-md
+  +sm
+    padding-top: $padding-sm
 .pt-lg
   padding-top: $padding-lg
-.pt-sm
-  padding-top: $padding-sm
+  +md
+    padding-top: $padding-md
+  +sm
+    padding-top: $padding-sm
 .pt-md
   padding-top: $padding-md
+  +sm
+    padding-top: $padding-sm
+.pt-sm
+  padding-top: $padding-sm
 
 .pb-xl
   padding-bottom: $padding-xl
+  +lg
+    padding-bottom: $padding-lg
+  +md
+    padding-bottom: $padding-md
+  +sm
+    padding-bottom: $padding-sm
 .pb-lg
   padding-bottom: $padding-lg
-.pb-sm
-  padding-bottom: $padding-sm
+  +md
+    padding-bottom: $padding-md
+  +sm
+    padding-bottom: $padding-sm
 .pb-md
   padding-bottom: $padding-md
+  +sm
+    padding-bottom: $padding-sm
+.pb-sm
+  padding-bottom: $padding-sm
 
 .icon
   display: inline-block
   fill: currentColor
   font-size: inherit
+
+.out
+  overflow: hidden
+  padding-top: $header-height * 2
+  +lg
+    padding-top: $header-height-lg * 2
+  +md
+    padding-top: $header-height-md * 2
 
 .container
   max-width: 1440px
@@ -46,7 +80,20 @@ input, textarea
   margin-left: auto
   margin-right: auto
 
+.logo
+  display: block
+  font-size: 0
+  img
+      max-height: 100%
+  +lg
+    height: $header-height-lg - 20px
+  +md
+    height: $header-height-md - 20px
+
+
 .phones
+  +xl
+    // +flex()
 
 .phone
   display: block
@@ -54,6 +101,10 @@ input, textarea
   +bold
   +hover
     text-decoration: underline
+  +xl
+    display: inline-block
+    +notlast
+      margin-right: 10px
   &__icon
     display: inline-block
     width: 15px
@@ -68,6 +119,9 @@ input, textarea
     vertical-align: super
   &--text
     color: $c-text
+  &--inherit
+    font-family: inherit
+    font-weight: inherit
 
 .cloud
   +pfr
@@ -90,4 +144,15 @@ input, textarea
   &--black
     color: $black
 
-    
+.blockquote
+  position: relative
+  &__icon
+    position: absolute
+    top: 0
+    right: calc(100% + 15px)
+    .icon
+      fill: $accent
+      font-size: 35px
+
+
+

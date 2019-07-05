@@ -1,0 +1,23 @@
+{%set
+links = [
+  { img: 'Italy-2-min.png', title: 'Италия' },
+  { img: 'Poland-2-min.png', title: 'Польша' },
+  { img: 'Ukraine-2-min.png', title: 'Украина' },
+  { img: '2.png', title: 'США' },
+  { img: 'Germany-2-min.png', title: 'Германия' },
+  { img: 'France-1-min.png', title: 'Франция' },
+  { img: 'Spain-2-min.png', title: 'Испания' }
+]
+%}
+
+<!-- begin section -->
+<section class="section pt-md pb-md">
+  <div class="container">
+    <div class="section__title title-under">
+      <h2 class="h2">Выберите свою головоломку {{ mixins.title() }}! </h2>
+    </div>
+  </div>
+
+   {% include "partials/_links.html" %}
+</section>
+<!-- end section -->

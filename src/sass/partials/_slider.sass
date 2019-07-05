@@ -1,5 +1,9 @@
 .slider
   $this: &
+  .swiper-container, .swiper-wrapper, .swiper-slide
+    box-sizing: border-box
+  .swiper-slide
+    height: auto
   &__wrap
     position: relative
   &__prev,
@@ -29,6 +33,10 @@
     transform: translate(0, -50%) rotate(180deg)
     +before
       left: 25px
+  &__prev-simple,
+  &__next-simple
+    background-color: transparent
+    color: $c-text
 
 
   &--center
@@ -41,11 +49,16 @@
         margin-right: auto
         // padding-left: 90px
         // padding-right: 90px
+        +sm
+          padding-top: 0
+          padding-bottom: 0
     .slide
       +tr(transform .3s)
       &.swiper-slide-active
         +scale(1.2)
         z-index: 1
+        +sm
+          +scale(1)
         .slide__img
           +before
             visibility: hidden
@@ -57,6 +70,13 @@
           background-color: rgba($purple, .5)
           border-radius: $radius
           +tr(opacity .3s, visibility .3s)
+  &--testimonials
+    &__wrap
+      #{$this}__prev
+        left: -70px
+      #{$this}__next
+        right: -70px
+
 
 
 .slide
@@ -64,3 +84,7 @@
     padding-top: 60%
     +cover
     position: relative
+    +md
+      padding-top: 80%
+    +sm
+      padding-top: 50%

@@ -4,12 +4,28 @@
 .info-item
   +flex(flex-start, center)
   color: $black
+  width: 33.33333%
+  padding-right: 15px
+  +sm
+    width: 100%
+    margin-bottom: 15px
+    padding-right: 0
   &__icon
     +inline-flex(center, center)
     border-radius: 50%
     height: 85px
     width: 85px
+    flex: 0 0 85px
     margin-right: 30px
+    +lg
+      margin-right: 20px
+    +md
+      margin-right: 15px
+      height: 70px
+      width: 70px
+      flex: 0 0 70px
+    +sm
+      margin-right: 10px
     .icon
       fill: $white
       font-size: 50px

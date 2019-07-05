@@ -7,15 +7,25 @@
   &__title
     text-align: center
     margin-bottom: 20px
+    +xs
+      margin-bottom: 15px
   &__title-mb-lg
     margin-bottom: 70px
   &__subttl
     text-align: center
     margin-bottom: 45px
+    +md
+      margin-bottom: 35px
+    +sm
+      margin-bottom: 25px
+    +xs
+      margin-bottom: 15px
   &__video
     padding-top: 40%
     position: relative
     overflow: hidden
+    +sm
+      padding-top: 60%
     iframe
       position: absolute
       top: 0
@@ -26,10 +36,6 @@
     font-weight: 700
     margin-bottom: 15px
 
-
-  &--lg
-    padding-top: $padding-lg
-    padding-bottom: $padding-lg
   &--white
     color: $white
 
@@ -42,14 +48,24 @@
   +cover
   background-size: contain
   position: relative
-  img
+  z-index: 1
+  img, iframe
     position: absolute
     width: 83.5%
     top: 7%
     left: 8%
+    +r(565)
+      max-height: 64px
   &--left
     max-width: 565px
     padding-top: 420px
+    +r(565)
+      padding-top: 75%
+
+.s-info-sm
+  +sm
+    padding-top: 60px
+    padding-bottom: 50px
 
 .s-features
   .section-icon
@@ -61,11 +77,15 @@
       left: 5%
 
 .s-play  
-  padding-bottom: 160px
   background-color: $brown-light
   .wave
     bottom: 0
     width: 100%
+    height: 100px
+    +md
+      height: 75px
+    +sm
+      height: 45px
 
   .section-icon
     top: 50%
@@ -76,29 +96,45 @@
       right: 5%
   .cloud
     position: absolute
-    top: 40%
+    z-index: 0
+    top: 30%
     right: 30%
+    +md
+      display: none
 
 .s-gallery
-  
   .wave
     height: 90px
-    min-width: calc(100% + 3px)
+    min-width: calc(100% + 5px)
+    +md
+      height: 75px
+    +sm
+      height: 50px
     &--top
       top: -1px
-      right: 0
-      left: -2px
-      min-width: 100%
+      right: -2px
+      left: -3px
+      // min-width: 100%
+      z-index: 1
+      +md
+        height: 40px
+      +sm
+        height: 30px
     &--bottom
       bottom: 0
       left: -1px
       right: -1px
-      z-index: 1
+      z-index: 2
   &__inner
     position: relative
     overflow: hidden
     max-height: 100vh
     background-color: $purple-accent
+    +md
+      padding-top: 50px
+      max-height: 500px
+    +sm
+      padding-top: 50px
   &__bg
     position: absolute
     z-index: 0
@@ -112,7 +148,7 @@
 .s-two-colored
   background-color: $brown-light
   overflow: hidden
-  position: relative
+  position: relative  
   .wave
     min-width: calc(100% + 5px)
     // height: 90px
@@ -123,12 +159,28 @@
     &--bottom
       bottom: -1px
       height: 90px
+    &--middle
+      top: 100%
+      left: 0
+      z-index: 1
+      height: 70px
   &__title
     margin-bottom: 15px
   &__top
     +cover
+    background-position: 20% 50%
     padding-top: 200px
     padding-bottom: 90px
+    position: relative
+    +xl
+      padding-top: $padding-xl
+    +lg
+      padding-top: $padding-lg
+    +md
+      padding-top: $padding-md
+      background-image: none !important
+    +sm
+      padding-top: $padding-sm
   &__bottom
     +cover
     color: $white

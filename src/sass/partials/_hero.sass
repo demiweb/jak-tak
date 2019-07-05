@@ -2,7 +2,6 @@
   // background-color: $gray-lighten
   background-color: $white
   text-align: center
-  padding-top: $padding-lg
   padding-bottom: 30px
   position: relative
   overflow: hidden
@@ -29,21 +28,43 @@
       height: 1px
       width: 40px
       +vcenter
+    +sm
+      display: block
+      +before
+        display: none
   &__title
     width: 50%
     text-align: center
     padding-left: 50px
     padding-right: 50px
+    +md
+      padding-left: 25px
+      padding-right: 25px
+    +sm
+      width: auto
+      padding-left: 0
+      padding-right: 0
+      margin-bottom: 15px
   &__descr
     width: 50%
     padding-left: 75px
     margin-bottom: 30px
     text-align: left
+    +md
+      padding-left: 50px
+    +sm
+      width: auto
+      padding-left: 0
   &__title-bottom
     margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
   &__img
     position: relative
     z-index: 1
+    font-size: 0
 
 .hero-descr
   &__title
@@ -52,6 +73,9 @@
     font-weight: 700
     line-height: 1.1
     margin-bottom: 12px
+    +css-lock(28, 45, 320, 1199, font-size)
+    +md
+      // font-size: 40px
     small
       font-size: $fz-sm
       font-weight: 300
@@ -68,14 +92,16 @@
   display: inline-block
   width: 45px
   height: 45px
-
+  +md
+    height: 30px
+    width: 30px
   span
     position: absolute
     width: 10px
     transform: translate(-50%, 0)
     left: 50%
     top: 0
-    height: 45px
+    height: 100%
     +tr(height .3s)
     +before
       position: absolute
