@@ -40,6 +40,9 @@ export default function setSliders() {
         navigation: {
           nextEl: next,
           prevEl: prev
+        },
+        on: {
+          init: setLazy
         }
       }
     };
