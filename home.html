@@ -20,7 +20,7 @@
             <div class="header__inner">
               <div class="header__logo">
                 <!-- begin logo -->
-                <a class="logo" href="/">
+                <a class="logo logo--header" href="/">
                   <img data-src="img/logo.png" alt="" class="js-lazy">
                 </a>
                 <!-- end logo -->
@@ -495,8 +495,12 @@
             <!-- end features -->
           </div>
         </div>
-        <i class="section-icon ic ic-comet"></i>
-        <i class="section-icon ic ic-star2"></i>
+        <div class="section__parallax js-parallax-scene">
+          <div class="section__parallax-scene" data-depth="0.1">
+            <i class="section-icon ic ic-comet"></i>
+            <i class="section-icon ic ic-star2"></i>
+          </div>
+        </div>
       </section>
       <!-- end section -->
       <!-- begin section -->
@@ -534,8 +538,12 @@
             <div class="cloud__title">Хочу такую же<br> на День Рождения!</div>
           </div>
         </div>
-        <i class="section-icon ic ic-comet"></i>
-        <i class="section-icon ic ic-star4"></i>
+        <div class="section__parallax js-parallax-scene">
+          <div class="section__parallax-scene" data-depth="0.1">
+            <i class="section-icon ic ic-comet"></i>
+            <i class="section-icon ic ic-star4"></i>
+          </div>
+        </div>
         <img src="img/wave-play.svg" alt="" class="wave">
       </section>
       <!-- end section -->
@@ -709,7 +717,7 @@
           <img src="img/wave-two-colored-middle.svg" alt="" class="wave wave--middle">
           <div class="container">
             <div class="row">
-              <div class="col-md-6 offset-md-6">
+              <div class="col-lg-6 offset-lg-6">
                 <div class="s-two-colored__title title-under title-under--left">
                   <h2 class="h2">Ультрафиолетовая печать — относительно новая технология печати, которую мы применили в <strong class="tm">«JakTak<sup>&reg;</sup>»</strong>
                   </h2>
@@ -741,7 +749,7 @@
                 <strong class="tm">«JakTak<sup>&reg;</sup>»</strong> - это не просто игрушка:</h2>
             </div>
             <div class="row">
-              <div class="col-7">
+              <div class="col-sm-7">
                 <div class="s-two-colored__list">
                   <div class="s-two-colored__list-title-lg">
                     <h3 class="h3">
@@ -759,7 +767,7 @@
                   <!-- end list -->
                 </div>
               </div>
-              <div class="col-5">
+              <div class="col-sm-5">
                 <div class="s-two-colored__list">
                   <div class="s-two-colored__list-title-lg">
                     <h3 class="h3">
@@ -785,14 +793,15 @@
       <section class="section s-app pt-sm pb-md">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-6">
+            <div class="col-md-6">
               <div class="s-app__title title-under title-under--left">
                 <h2 class="h2">Дополненная реальность для <strong class="tm">«JakTak<sup>&reg;</sup>»</strong> от Live Portrait!</h2>
               </div>
               <div class="s-app__text">В игрушку <strong class="tm">«JakTak<sup>&reg;</sup>»</strong> мы внедрили такое чудо, как Дополненная реальность от Live Portrait! Это легкое мобильное приложение для любого смарт-устройства. Наведя на изображение, Вы перенесетесь в место вашей мечты……</div>
             </div>
-            <div class="col-6">
-              <div class="section-tv s-app__tv js-lazy" data-background-image="img/tv/2.png">
+            <div class="col-md-6">
+              <div class="section-tv section-tv--right s-app__tv js-lazy" data-background-image="img/tv/2.png">
+                <iframe class="js-lazy" data-src="https://www.youtube.com/embed/mQsrUjULR5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="s-app__btns">
                 <a class="s-app__btn" href="#">
@@ -820,12 +829,12 @@
           <div class="how__bg js-lazy" data-background-image="img/home/how/orange.png"></div>
           <div class="container">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6 order-1 order-md-0">
                 <div class="how__cards">
                   <!-- begin price-card -->
                   <div class="price-card">
-                    <div class="price-card__title">опт</div>
-                    <div class="price-card__price"> <small>от</small>6<small>евро</small></div>
+                    <div class="price-card__title title title--md">опт</div>
+                    <div class="price-card__price title title--lg"> <small>от</small>6<small>евро</small></div>
                     <div class="price-card__btn">
                       <a href="#" class="btn">Заказать</a>
                     </div>
@@ -833,8 +842,8 @@
                   <!-- end price-card -->
                   <!-- begin price-card -->
                   <div class="price-card price-card--accent">
-                    <div class="price-card__title">розница <small>Цена за 1 шт:</small></div>
-                    <div class="price-card__price">12<small>евро</small></div>
+                    <div class="price-card__title title title--md">розница <small>Цена за 1 шт:</small></div>
+                    <div class="price-card__price title title--lg">12<small>евро</small></div>
                     <div class="price-card__btn">
                       <a href="#" class="btn">Заказать</a>
                     </div>
@@ -842,7 +851,7 @@
                   <!-- end price-card -->
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-md-6 order-0 order-md-1">
                 <div class="how__block how__block-right">
                   <div class="how__block-in">
                     <div class="how__arrow"><i class="ic ic-arr-yellow"></i></div>
@@ -864,7 +873,7 @@
           <div class="how__bg js-lazy" data-background-image="img/home/how/green.png"></div>
           <div class="container">
             <div class="row">
-              <div class="col-8">
+              <div class="col-xl-8 col-lg-6 col-md-6">
                 <div class="how__block">
                   <div class="how__block-in">
                     <div class="how__arrow"><i class="ic ic-arr-green"></i></div>
@@ -875,7 +884,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="how__form">
                   <!-- begin form -->
                   <div class="form">
@@ -933,9 +942,7 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-9">
-              </div>
-              <div class="col-3">
+              <div class="col-md-6 offset-md-6">
                 <div class="how__block how__block-right">
                   <div class="how__block-in">
                     <div class="how__arrow"><i class="ic ic-arr-white"></i></div>
@@ -957,7 +964,7 @@
       <section class="section s-order-sm pt-md pb-lg">
         <div class="container">
           <div class="row">
-            <div class="col-6 offset-1">
+            <div class="col-xl-6 offset-xl-1 col-sm-7">
               <div class="s-order-sm__title title-under title-under--left">
                 <h2 class="h2">Ура! <strong class="tm">«JakTak<sup>&reg;</sup>»</strong> уже Ваш!</h2>
               </div>
@@ -977,22 +984,26 @@
                 <!-- end list -->
               </div>
             </div>
-            <div class="col-5">
+            <div class="col-xl-5 col-sm-5">
               <img data-src="img/items-lg/Germany-1-min.png" alt="" class="js-lazy s-order-sm__img">
             </div>
           </div>
         </div>
-        <div class="section-icon s-order-sm__comet">
-          <i class="ic ic-comet"></i>
-        </div>
-        <div class="section-icon s-order-sm__star-left-bottom">
-          <i class="ic ic-star4"></i>
-        </div>
-        <div class="section-icon s-order-sm__star-left-center">
-          <i class="ic ic-star4"></i>
-        </div>
-        <div class="section-icon s-order-sm__star-right-top">
-          <i class="ic ic-star4"></i>
+        <div class="section__parallax js-parallax-scene">
+          <div class="section__parallax-scene" data-depth="0.1">
+            <div class="section-icon s-order-sm__comet">
+              <i class="ic ic-comet"></i>
+            </div>
+            <div class="section-icon s-order-sm__star-left-bottom">
+              <i class="ic ic-star4"></i>
+            </div>
+            <div class="section-icon s-order-sm__star-left-center">
+              <i class="ic ic-star4"></i>
+            </div>
+            <div class="section-icon s-order-sm__star-right-top">
+              <i class="ic ic-star4"></i>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end section -->
@@ -1000,7 +1011,7 @@
       <section class="section s-testimonials pt-lg pb-md">
         <div class="container">
           <div class="row">
-            <div class="col-6 offset-3">
+            <div class="col-xl-6 col-lg-8 offset-xl-3 offset-lg-2">
               <div class="section__title title-under">
                 <h2 class="h2">Что говорят об <strong class="tm">«JakTak<sup>&reg;</sup>»</strong> ! </h2>
               </div>
@@ -1010,7 +1021,7 @@
           </div>
           <div class="s-testimonials__slider">
             <div class="row">
-              <div class="col-10 offset-1">
+              <div class="col-sm-10 offset-sm-1">
                 <!-- begin slider -->
                 <div class="slider__wrap slider--testimonials__wrap">
                   <div class="swiper-container js-slider" data-slider="testimonials">
@@ -1200,7 +1211,7 @@
       <footer class="footer">
         <div class="container">
           <div class="row">
-            <div class="col-3">
+            <div class="col-md-3 order-4 order-md-0">
               <div class="footer__logo">
                 <!-- begin logo -->
                 <a class="logo" href="/">
@@ -1211,7 +1222,7 @@
               <div class="footer__descr">Иргушка-головоломка JakTak Довольными остаются 9,6 из 10 человек, которые выбрали нас! </div>
               <div class="footer__auth">Разработка сайта: <a href="#"><img data-src="img/demiweb.png" alt="" class="js-lazy"></a></div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-sm-4 col-6">
               <div class="footer__block">
                 <div class="footer__title">
                   <h2 class="h2">Важное</h2>
@@ -1228,7 +1239,7 @@
                 <!-- end nav -->
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-sm-4 col-6">
               <div class="footer__block">
                 <div class="footer__title">
                   <h2 class="h2">Информация</h2>
@@ -1245,7 +1256,7 @@
                 <!-- end nav -->
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-sm-4 col-6">
               <div class="footer__block">
                 <div class="footer__title">
                   <h2 class="h2">Контакты</h2>
@@ -1262,7 +1273,7 @@
                 <!-- end nav -->
               </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 order-5">
               <div class="footer__copy"><span>JakTak</span> &copy; 2019. Все права защищены</div>
             </div>
           </div>
