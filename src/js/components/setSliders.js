@@ -41,7 +41,6 @@ export default function setSliders() {
           nextEl: next,
           prevEl: prev
         },
-<<<<<<< HEAD
         breakpoints: {
           1200: {
             spaceBetween: 15,
@@ -50,8 +49,6 @@ export default function setSliders() {
             slidesPerView: 1
           }
         },
-=======
->>>>>>> 074fbd767d22c311ef490e0672ee83b1adf612ad
         on: {
           init: setLazy
         }
