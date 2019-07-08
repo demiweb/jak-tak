@@ -1,0 +1,42 @@
+<!-- begin section -->
+<section class="section s-video-how section--white js-lazy" data-background-image="img/countries/{{ sectionVideo.img }}">
+  <div class="wave wave--top">
+    {{ mixins.icon('wave-country') }}
+  </div>
+  <div class="wave wave--bottom">
+    {{ mixins.icon('wave-country') }}
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <div class="section__title title-under title-under--inherit">
+          <h2 class="h2">
+            {% if sectionVideo.title %}
+            {{ sectionVideo.title | safe }}
+            {% else %}
+            Посмотрите как работает {{ mixins.title() }}! 
+            {% endif %}
+          </h2>
+        </div>
+
+        <div class="section__subttl">
+          {% if sectionVideo.subttl %}
+          {{ sectionVideo.subttl | safe }}
+          {% else %}
+          На видео создатель уникальной волшебной игрушки-головоломки раскрывает все многообразие {{ mixins.title() }} и представляет множество разнообразных фигур
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="col-8 offset-2">
+        <div class="s-video-how__video">
+          <iframe class="js-lazy"  data-src="https://www.youtube.com/embed/mQsrUjULR5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+<!-- end section -->

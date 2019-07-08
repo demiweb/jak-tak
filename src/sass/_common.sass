@@ -10,8 +10,9 @@ body
   +sm
     font-size: $fz-sm
 
-input, textarea
+input, textarea, button
   font-family: inherit
+  color: inherit
   +placeholder
     font-family: inherit
 
@@ -66,7 +67,7 @@ input, textarea
   font-size: inherit
 
 .out
-  overflow: hidden
+  // overflow: hidden
   padding-top: $header-height * 2
   +lg
     padding-top: $header-height-lg * 2
@@ -157,5 +158,44 @@ input, textarea
       +xs
         font-size: 20px
 
+.counter
+  color: $gray
+  font-size: 0
+  input, button
+    display: inline-block
+    vertical-align: top
+  input
+    width: 60px
+    height: 37px
+    border: 1px solid  $c-border
+    font-size: $fz
+    padding-left: 5px
+    padding-right: 5px
+    text-align: center
+  button
+    background-color: $white
+    font-size: $fz
+    height: 37px
+    width: 35px
+    border: 1px solid  $c-border
+    // +inline-flex(center, center)
+    line-height: 35px
+    font-size: $fz-lg
+    font-weight: 100
+    &:first-child
+      border-top-left-radius: 30px
+      border-bottom-left-radius: 30px
+    &:last-child
+      border-top-right-radius: 30px
+      border-bottom-right-radius: 30px
 
+.price
+  @extend .h2
+  color: $yellow
+  +sm
+    small
+      font: $fz-sm
+  small
+    font-size: $fz
+    color: $gray
 

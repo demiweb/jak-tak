@@ -1,5 +1,5 @@
 <!-- begin links -->
-<div class="item-links">
+<div class="item-links{% if linksMod %} {{ linksMod }}{% endif %}">
   {% for i in links %}
   <!-- begin item-link -->
   <a href="#" class="item-link">

@@ -1,0 +1,53 @@
+.order
+  background-color: $gray-lighten
+  overflow: hidden
+  +cover
+  background-size: contain
+  background-position: 100% 100%
+  &__left
+    background-color: $white
+    position: relative
+    height: 100%
+    padding: 45px 35px 20px
+    .gallery
+      position: relative
+      z-index: 1
+    +before
+      background-color: $white
+      z-index: 0
+      +coverdiv
+      border: 1px solid  $c-border
+      border-left: 0
+      right: 0
+      left: auto
+      width: 50vw
+  &__right
+    height: 100%
+    padding-top: 115px
+    padding-left: 45px
+    padding-bottom: 240px
+  &__title
+    color: $blue-light
+    +flex(flex-start, center)
+    margin-bottom: 35px
+    .h1, h1
+      margin-right: 30px
+  &__price-block
+    max-width: 605px
+    margin-bottom: 35px
+  &__meta
+    +flex()
+  &__meta-list
+    flex-grow: 1
+    padding-left: 55px
+  &__price
+    display: inline-block
+    vertical-align: middle
+    margin-bottom: 30px
+  &__counter
+    display: inline-block
+    vertical-align: middle
+    margin-right: 30px
+    margin-bottom: 30px
+  &__links
+    margin-bottom: -50px

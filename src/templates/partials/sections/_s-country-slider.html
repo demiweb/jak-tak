@@ -1,0 +1,25 @@
+<!-- begin section -->
+<section class="section s-country-slider js-lazy" data-background-image="img/countries/{{ sectionSlider.img }}">
+  <div class="wave wave--top">
+    {{ mixins.icon('wave-country') }}
+  </div>
+  <div class="s-country-slider__img s-country-slider__img-top-right">
+    <img data-src="img/countries/img-sm/{{ sectionSlider.imgSmTopRight }}" alt="" class="js-lazy">
+  </div>
+  <div class="s-country-slider__img s-country-slider__img-top-left">
+    <img data-src="img/countries/img-sm/{{ sectionSlider.imgSmTopLeft }}" alt="" class="js-lazy">
+  </div>
+
+
+  <div class="container">
+    <div class="section__title title-under">
+      <h2 class="h2">{{ sectionSlider.title }}</h2>
+    </div>
+
+    <div class="section__subttl">Посмотрите на тех, кто уже стал на шаг ближе к волшебному миру путешествий... </div>
+
+    {% include "partials/sliders/_slider-center.html" %}
+    
+  </div>
+</section>
+<!-- end section -->

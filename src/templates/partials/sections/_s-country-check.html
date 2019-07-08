@@ -1,0 +1,42 @@
+<!-- begin section -->
+<section class="section section--white section--center section--center-full s-check">
+  <div class="s-check__bg js-lazy" data-background-image="img/countries/{{ sectionCheck.bg }}"></div>
+
+  <div class="wave wave--top">
+    {{ mixins.icon('wave-country') }}
+  </div>
+  <div class="wave wave--bottom">
+    {{ mixins.icon('wave-country') }}
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="section--center__img">
+          <img data-src="img/items-lg/{{ sectionCheck.img }}" alt="" class="js-lazy">
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="section--center__block">
+          <div class="section--center__block-title title-under title-under--left title-under--inherit">
+            <h2 class="h2">
+              Перейти к оформлению заказа {{ mixins.title() }} прямо сейчас!
+            </h2>
+          </div>
+
+          <div class="section--center__subttl">Просто нажмите кнопку и осуществите вашу мечту уже сегодня!</div>
+
+          <div class="section--center__btn">
+            {{ mixins.btn(
+              title = 'Перейти к оформлению',
+              mod = 'btn--lg'
+            ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+<!-- end section -->

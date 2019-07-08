@@ -52,7 +52,19 @@ export default function setSliders() {
         on: {
           init: setLazy
         }
-      }
+      },
+      gallery: {
+        slidesPerView: 3,
+        loop: true,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: next,
+          prevEl: prev
+        },
+        on: {
+          init: setLazy
+        }
+      },
     };
 
     // $(slider).slick(options[name]);
