@@ -11,6 +11,14 @@
       margin-bottom: 15px
   &__title-mb-lg
     margin-bottom: 70px
+    +lg
+      margin-bottom: 50px
+    +md
+      margin-bottom: 40px
+    +sm
+      margin-bottom: 30px
+    +xs
+      margin-bottom: 15px
   &__subttl
     text-align: center
     margin-bottom: 45px
@@ -35,6 +43,12 @@
   &__list-title
     font-weight: 700
     margin-bottom: 15px
+  &__parallax
+    +coverdiv
+    z-index: 0
+    pointer-events: none
+  &__parallax-scene
+    +coverdiv
 
   &--white
     color: $white
@@ -61,6 +75,17 @@
     padding-top: 420px
     +r(565)
       padding-top: 75%
+  &--right
+    // padding-top: 380px
+    padding-top: 55%
+    img, iframe
+      width: 88.4%
+      left: 5.8%
+      top: 2%
+      height: 90%
+      +r(565)
+        max-height: none
+
 
 .s-info-sm
   +sm
@@ -155,12 +180,16 @@
     &--top
       left: 0
       top: 0
-      height: 80px
+      height: 50px
+      +md
+        height: 25px
     &--bottom
       bottom: -1px
-      height: 90px
+      height: 50px
+      +sm
+        height: $padding-sm
     &--middle
-      top: 100%
+      top: calc(100% - 2px)
       left: 0
       z-index: 1
       height: 70px
@@ -179,8 +208,10 @@
     +md
       padding-top: $padding-md
       background-image: none !important
+      padding-bottom: $padding-md
     +sm
       padding-top: $padding-sm
+      padding-bottom: $padding-sm
   &__bottom
     +cover
     color: $white
@@ -190,13 +221,17 @@
     margin-bottom: 10px
   &__list-title-lg
     margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
   &__list
     margin-bottom: 25px
 
 .s-app
   &__tv
     // max-width: 565px
-    padding-top: 380px
+    
     margin-bottom: 50px
   &__title
     margin-bottom: 20px
@@ -207,11 +242,17 @@
     font-size: 0
     margin-left: 5px
     margin-right: 5px
+  &__text
+    +md
+      margin-bottom: 15px
 
 .s-order-sm
   &__img
     margin-left: -40%
     pointer-events: none
+    +xs
+      margin-left: -20%
+      padding-top: 25px
   &__title
     margin-bottom: 5px
   &__comet

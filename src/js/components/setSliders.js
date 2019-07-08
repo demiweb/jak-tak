@@ -40,6 +40,17 @@ export default function setSliders() {
         navigation: {
           nextEl: next,
           prevEl: prev
+        },
+        breakpoints: {
+          1200: {
+            spaceBetween: 15,
+          },
+          992: {
+            slidesPerView: 1
+          }
+        },
+        on: {
+          init: setLazy
         }
       }
     };

@@ -38,14 +38,14 @@ form = [
 
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 order-1 order-md-0">
             <div class="how__cards">
               {% for i in price %}
               <!-- begin price-card -->
               <div class="price-card{% if i.mod %} {{ i.mod }}{% endif %}">
-                <div class="price-card__title">{{ i.title | safe }}</div>
+                <div class="price-card__title title title--md">{{ i.title | safe }}</div>
 
-                <div class="price-card__price">{{ i.price | safe }}</div>
+                <div class="price-card__price title title--lg">{{ i.price | safe }}</div>
 
                 <div class="price-card__btn">
                   {{ mixins.btn(
@@ -59,7 +59,7 @@ form = [
               </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-md-6 order-0 order-md-1">
             <div class="how__block how__block-right">
               <div class="how__block-in">
                 <div class="how__arrow"><i class="ic ic-arr-yellow"></i></div>
@@ -84,7 +84,7 @@ form = [
 
       <div class="container">
         <div class="row">
-          <div class="col-8">
+          <div class="col-xl-8 col-lg-6 col-md-6">
             <div class="how__block">
               <div class="how__block-in">
                 <div class="how__arrow"><i class="ic ic-arr-green"></i></div>
@@ -99,7 +99,7 @@ form = [
             </div>
           </div>
 
-          <div class="col-4">
+          <div class="col-xl-4 col-lg-6 col-md-6">
             <div class="how__form">
               <!-- begin form -->
               <div class="form">
@@ -148,11 +148,8 @@ form = [
 
       <div class="container">
         <div class="row">
-          <div class="col-9">
-            
-          </div>
 
-          <div class="col-3">
+          <div class="col-md-6 offset-md-6">
             <div class="how__block how__block-right">
               <div class="how__block-in">
                 <div class="how__arrow"><i class="ic ic-arr-white"></i></div>

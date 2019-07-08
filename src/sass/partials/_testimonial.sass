@@ -6,8 +6,14 @@
   +flex(space-between, normal, column)
   height: 100%
   font-size: $fz-sm
+  +lg
+    padding: 30px 15px 15px 60px
+  +xs
+    padding: 20px 15px 15px 40px
   &__quote
     margin-bottom: 20px
+    +xs
+      margin-bottom: 10px
   &__bottom
     +flex(flex-start, center)
   &__img
@@ -19,8 +25,14 @@
     display: block
     border: 1px solid  $gray-light
     margin-right: 25px
+    +xs
+      width: 70px
+      height: 70px
+      flex: 0 0 70px
   &__title
     font-size: 21px
     font-weight: 700
     margin-bottom: 5px
+    +xs
+      font-size: 18px
   &__subttl

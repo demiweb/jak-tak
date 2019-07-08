@@ -81,14 +81,15 @@ input, textarea
   margin-right: auto
 
 .logo
-  display: block
+  display: inline-block
   font-size: 0
-  img
-      max-height: 100%
-  +lg
-    height: $header-height-lg - 20px
-  +md
-    height: $header-height-md - 20px
+  &--header
+    img
+        max-height: 100%
+    +lg
+      height: $header-height-lg - 20px
+    +md
+      height: $header-height-md - 20px
 
 
 .phones
@@ -127,12 +128,12 @@ input, textarea
   +pfr
   color: $accent
   font-size: 25px
+  +css-lock(17, 25, 992, 1199, font-size)
   width: 300px
   height: 265px
   +cover
   background-size: contain
   +flex(center, center)
-  mix-blend-mode: normal
   &__title
     text-align: center
     // padding-left: 30px
@@ -153,6 +154,8 @@ input, textarea
     .icon
       fill: $accent
       font-size: 35px
+      +xs
+        font-size: 20px
 
 
 
