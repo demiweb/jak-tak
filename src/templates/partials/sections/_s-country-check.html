@@ -3,8 +3,12 @@
   <div class="s-check__bg js-lazy" data-background-image="img/countries/{{ sectionCheck.bg }}"></div>
 
   <div class="section-cursive-text">
-    New York
-    <small>Excelsior</small>
+    {% if sectionCheck.cursive %}
+    {{ sectionCheck.cursive | safe }}
+    {% else %}
+    Kyiv <small>glory to heroes</small>
+    {% endif %}
+    
   </div>
 
   <div class="wave wave--top">
