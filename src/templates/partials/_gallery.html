@@ -15,10 +15,13 @@ slider = [
     <!-- begin slider -->
     <div class="slider__wrap slider--gallery__wrap">
       <div class="swiper-container js-slider" data-slider="gallery">
-        <div class="swiper-wrapper slider slider--gallery">
+        <div class="swiper-wrapper slider slider--gallery js-lightgallery">
           {% for i in slider %}
           <!-- begin slide -->
-          <a href="#" class="swiper-slide slide">
+          <a
+            href="img/countries/slider/{{ i.img }}"
+            class="swiper-slide slide" 
+            data-exthumbimage="img/countries/slider/{{ i.img }}">
             <span class="slide__img js-lazy" data-background-image="img/countries/slider/{{ i.img }}"></span>
           </a>
           <!-- end slide -->
@@ -32,6 +35,8 @@ slider = [
     <!-- end slider -->
   </div>
 
-  <div class="gallery__spinner"></div>
+  <div class="gallery__spinner">
+    <div class="spinner js-spinner" data-width="" data-height="" data-source="img/rotate360/rad_zoom_{frame}.jpg" data-frame="[1, 34]"></div>
+  </div>
 </div>
 <!-- end gallery -->

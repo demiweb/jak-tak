@@ -5,6 +5,9 @@ import setSliders from './components/setSliders';
 import setCircleSlider from './components/setCircleSlider';
 import toggleMenu from './components/toggleMenu';
 import setParallax from './components/setParallax';
+import setGallery from './components/setGallery';
+import setCounter from './components/setCounter';
+import rotateImage from './components/rotateImage';
 
 $(function() {
   // sayHello();
@@ -14,4 +17,7 @@ $(function() {
   setCircleSlider();
   toggleMenu();
   setParallax();
+  setGallery();
+  setCounter();
+  rotateImage();
 });

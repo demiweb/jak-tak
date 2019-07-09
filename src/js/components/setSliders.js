@@ -61,6 +61,17 @@ export default function setSliders() {
           nextEl: next,
           prevEl: prev
         },
+        breakpoints: {
+          992: {
+            spaceBetween: 5
+          },
+          768: {
+            spaceBetween: 20
+          },
+          576: {
+            spaceBetween: 5
+          }
+        },
         on: {
           init: setLazy
         }

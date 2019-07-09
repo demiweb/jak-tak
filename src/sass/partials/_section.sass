@@ -55,14 +55,22 @@
   &--white
     color: $white
   &--center
-    min-height: 100vh    
+    min-height: 100vh
+    +md
+      min-height: 75vh  
     &__block-title
       margin-bottom: 20px
+      +md
+        margin-bottom: 10px
     &__subttl
       margin-bottom: 30px
+      +md
+        margin-bottom: 15px
     &__img
       overflow: hidden
-      img
+      +xs
+        margin-bottom: 15px
+      img[data-loaded="true"]
         margin-left: -10%
   &--center-full
     +flex(center, normal, column)
@@ -287,6 +295,11 @@
   padding-top: 140px
   padding-bottom: 100px
   margin-bottom: $padding-md
+  +lg
+    padding-top: $padding-lg
+  +md
+    padding-top: $padding-md
+    padding-bottom: $padding-md
   .wave
     width: 100%
     font-size: 0
@@ -295,6 +308,10 @@
       width: 100%
       height: 70px
       fill: $white
+      +lg
+        height: 50px
+      +md
+        height: 30px
     &--top
       transform: scale(-1)
       top: 0
@@ -305,7 +322,11 @@
   &__video
     position: relative
     padding-top: 50%
-    margin-bottom: -100px
+    margin-bottom: -$padding-lg
+    +md
+      margin-bottom: -$padding-md
+    +xss
+      padding-top: 70%
     iframe
       +coverdiv
       border-radius: $radius
@@ -314,7 +335,7 @@
   background-color: $brown-light
   +cover
   background-size: 100% auto
-  background-position: 50% 100%
+  background-position: 50% 100%  
   .ic-comet
     top: 20%
     right: 20%
@@ -327,6 +348,12 @@
       height: 160px
       width: 100%
       fill: $white
+      +lg
+        height: 100px
+      +md
+        height: 60px
+      +sm
+        height: 40px
     &--top
       transform: scaleY(-1)
     &--bottom
@@ -336,6 +363,10 @@
         transform: scaleX(-1)
   &__title
     margin-bottom: 30vh
+    +md
+      margin-bottom: 20vh
+    +sm
+      margin-bottom: 10vh
   
 
 .s-country-slider
@@ -345,6 +376,16 @@
   background-size: auto
   background-position: 100% 100%
   background-color: $brown-lighten
+  +lg
+    // padding-top: $padding-xl
+    padding-top: 200px
+    padding-bottom: $padding-xl
+  +md
+    padding-top: $padding-xl
+    padding-bottom: $padding-lg
+  +xs
+    padding-top: $padding-md
+    padding-bottom: $padding-lg
   .container
     position: relative
     z-index: 2
@@ -355,6 +396,10 @@
       fill: $white
       width: 100%
       height: $padding-lg
+      +lg
+        height: 60px
+      +md
+        height: 40px
     &--top
       top: 0
       transform: scaleY(-1)
@@ -362,9 +407,19 @@
   &__img
     position: absolute
     z-index: 1
+    font-size: 0
+    +lg
+      img
+        max-width: 70%
+    +md
+      img
+        max-width: 50%
+    +xs
+      display: none
   &__img-top-right
     top: 0
     right: 0
+    text-align: right
   &__img-top-left
     top: 0
     left: 0
@@ -373,12 +428,18 @@
   background-color: $brown
   position: relative
   padding-bottom: $padding-lg
+  .container
+    z-index: 2
   .wave
     width: 100%
     .icon
       width: 100%
       // height: auto
       height: $padding-lg
+      +lg
+        height: 60px
+      +md
+        height: 40px
     &--top
       bottom: 100%
       transform: scaleX(-1)
