@@ -9,3 +9,4 @@ PageList:
 - file: italy.html
 - file: germany.html
 - file: france.html
+- file: cart.html

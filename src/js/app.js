@@ -8,6 +8,7 @@ import setParallax from './components/setParallax';
 import setGallery from './components/setGallery';
 import setCounter from './components/setCounter';
 import rotateImage from './components/rotateImage';
+import setSelects from './components/setSelects';
 
 $(function() {
   // sayHello();
@@ -20,4 +21,5 @@ $(function() {
   setGallery();
   setCounter();
   rotateImage();
+  setSelects();
 });

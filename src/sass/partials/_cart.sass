@@ -1,0 +1,135 @@
+.cart
+  border-radius: $radius
+  background-color: $white
+  box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.17)
+  &__items
+    margin-bottom: 65px
+    +md
+      margin-bottom: 40px
+    +sm
+      margin-bottom: 20px
+  &__controls
+    +flex()
+    padding-left: 50px
+    padding-right: 50px
+    padding-bottom: 75px
+    +lg
+      display: block
+    +md
+      padding-left: 20px
+      padding-right: 20px
+      padding-bottom: 30px
+  &__inputs
+    width: percentage(9/12)
+    +lg
+      width: auto
+  &__amount
+    width: percentage(3/12)
+    padding-left: 50px
+    +xl
+      padding-left: 10px
+    +lg
+      padding-left: 0
+      width: auto
+  &__price
+    font-size: $fz-lg
+    color: $gray-dark
+    font-weight: 700
+    +flex(space-between, flex-end)
+    margin-bottom: 25px
+    +lg
+      justify-content: center
+      .cart-price
+        margin-left: 20px
+    +md
+      margin-bottom: 15px
+    +sm
+      font-size: 21px
+    +xs
+      .cart-price
+        margin-left: 10px
+  &__inputs-title
+    font-size: $fz-sm
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+  &__btn
+    +lg
+      max-width: 280px
+      margin-left: auto
+      margin-right: auto
+
+
+
+.cart-item
+  +flex(flex-start, center, row, wrap)
+  padding-top: 35px
+  padding-bottom: 35px
+  padding-right: 50px
+  border-bottom: 1px solid  $c-border
+  +md
+    padding-top: 20px
+    padding-bottom: 20px
+  +sm
+    padding-right: 0
+  &__img
+    margin-right: 20px
+  &__meta
+    flex-grow: 1
+    +xs
+      width: 100%
+      padding-left: 20px
+      padding-right: 20px
+  &__title
+    font-size: $fz-sm
+    color: $blue-light
+    font-weight: 700
+  &__subttl
+    font-size: 11px
+    color: $gray-light
+  &__delete
+    color: $gray
+    margin-left: 12px
+    +sm
+      margin-left: 0
+    .icon
+      font-size: 21px
+  &__amount
+    +flex(flex-end, center, row, wrap)
+    +sm
+      width: 100%
+      justify-content: space-between
+      padding-left: 20px
+      padding-right: 20px
+      padding-top: 15px
+  &__price
+    margin-left: 40px
+    +sm
+      margin-left: 0
+
+.cart-price
+  font-size: 28px
+  font-weight: 700
+  small
+    font-size: .4em
+  +sm
+    font-size: $fz-lg
+  &__disabled
+    position: relative
+    color: $gray
+    font-size: .65em
+    margin-right: 5px
+    +after
+      position: absolute
+      width: 100%
+      height: 2px
+      background-color: $accent
+      top: 50%
+      transform: translate(0, -50%)
+      left: 0
+
+  &--lg
+    color: $accent
+    font-size: 32px
+    +sm
+      font-size: 26px
