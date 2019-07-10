@@ -111,6 +111,7 @@
                     <div class="lang__title">Ru</div>
                     <div class="lang__list">
                       <a href="#" class="lang__link">Ua</a>
+                      <a href="#" class="lang__link">En</a>
                     </div>
                   </div>
                   <!-- end lang -->
@@ -189,11 +190,11 @@
       </header>
       <!-- end header -->
       <!-- begin section -->
-      <section class="section s-partners-form pt-md pb-xl section--white js-lazy">
+      <section class="section s-partners-form pt-md pb-xl section--white js-lazy" data-background-image="img/partners/bg-form.jpg">
         <div class="container">
           <div class="section__breadcrumbs">
             <!-- begin breadcrumbs -->
-            <div class="breadcrumbs">
+            <div class="breadcrumbs breadcrumbs--white">
               <ul>
                 <li><a href="#">Главная</a></li>
                 <li>-</li>
@@ -207,7 +208,7 @@
           </div>
           <div class="s-partners-form__form">
             <!-- begin form -->
-            <div class="form form--center">
+            <div class="form form--center form--lg">
               <form>
                 <div class="form__title title-under title-under--green-lighten">
                   <h3 class="h3">Хотите стать нашим партнером?</h3>
@@ -244,12 +245,13 @@
                 <div class="form__field">
                   <!-- begin textarea -->
                   <div class="textarea textarea--input">
-                    <textarea placeholder="Комментарий"></textarea>
+                    <textarea class="js-textarea" placeholder="Комментарий"></textarea>
                   </div>
                   <!-- end textarea -->
                 </div>
                 <div class="form__btn">
-                  <button class="btn">Стать партнером</button> ` </div>
+                  <button class="btn">Стать партнером</button>
+                </div>
               </form>
             </div>
             <!-- end form -->
@@ -260,50 +262,98 @@
       <!-- begin section -->
       <section class="section pt-lg pb-xl">
         <div class="container">
+          <div class="section__title title-under title-under--purple-accent">
+            <h2 class="h2">Почему сотрудничать с нами выгодно?</h2>
+          </div>
           <div class="row">
-            <div class="col-md-8 offset-md-2">
-              <div class="section__title title-under title-under--purple">
-                <h2 class="h2">Почему сотрудничать с нами выгодно?</h2>
-              </div>
+            <div class="col-md-6 offset-md-3">
               <div class="section__subttl text--sm">Компания «JacTak» ценит своих партнеров, честное и взаимовыгодное сотрудничество для нас превыше всего</div>
             </div>
           </div>
           <!-- begin features-list -->
           <div class="features-list">
             <!-- begin feature-item -->
-            <div class="feature-item">
-              <div class="feature-item__icon"></div>
-              <div class="feature-item__text">Уникальная игрушка-головоломка JakТаk ручной работы станет самым популярным товаром в вашем магазине;</div>
+            <div class="feature-item__wrap">
+              <div class="feature-item">
+                <div class="feature-item__icon">
+                  <!-- begin icon-minus -->
+                  <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-minus">
+                    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM4 7v2h8V7zm0 0" />
+                  </svg>
+                  <!-- end icon-minus -->
+                </div>
+                <div class="feature-item__text">Уникальная игрушка-головоломка JakТаk ручной работы станет самым популярным товаром в вашем магазине;</div>
+              </div>
             </div>
             <!-- end feature-item -->
             <!-- begin feature-item -->
-            <div class="feature-item">
-              <div class="feature-item__icon"></div>
-              <div class="feature-item__text">«JakТаk» идеально подойдет для продажи в интернете</div>
+            <div class="feature-item__wrap">
+              <div class="feature-item">
+                <div class="feature-item__icon">
+                  <!-- begin icon-minus -->
+                  <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-minus">
+                    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM4 7v2h8V7zm0 0" />
+                  </svg>
+                  <!-- end icon-minus -->
+                </div>
+                <div class="feature-item__text">«JakТаk» идеально подойдет для продажи в интернете</div>
+              </div>
             </div>
             <!-- end feature-item -->
             <!-- begin feature-item -->
-            <div class="feature-item">
-              <div class="feature-item__icon"></div>
-              <div class="feature-item__text">Универсальный товар JakТаk, способен покорить клентов всех возрастов и рода деятельности;</div>
+            <div class="feature-item__wrap">
+              <div class="feature-item">
+                <div class="feature-item__icon">
+                  <!-- begin icon-minus -->
+                  <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-minus">
+                    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM4 7v2h8V7zm0 0" />
+                  </svg>
+                  <!-- end icon-minus -->
+                </div>
+                <div class="feature-item__text">Универсальный товар JakТаk, способен покорить клентов всех возрастов и рода деятельности;</div>
+              </div>
             </div>
             <!-- end feature-item -->
             <!-- begin feature-item -->
-            <div class="feature-item">
-              <div class="feature-item__icon"></div>
-              <div class="feature-item__text">Загадочная и оригинальная вещицыа «JakТаk» точно повысит популярность вашего бизнеса </div>
+            <div class="feature-item__wrap">
+              <div class="feature-item">
+                <div class="feature-item__icon">
+                  <!-- begin icon-minus -->
+                  <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-minus">
+                    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM4 7v2h8V7zm0 0" />
+                  </svg>
+                  <!-- end icon-minus -->
+                </div>
+                <div class="feature-item__text">Загадочная и оригинальная вещицыа «JakТаk» точно повысит популярность вашего бизнеса </div>
+              </div>
             </div>
             <!-- end feature-item -->
             <!-- begin feature-item -->
-            <div class="feature-item">
-              <div class="feature-item__icon"></div>
-              <div class="feature-item__text">Полезный инструмент развития креативной личности теперь на полках вашего магазина;</div>
+            <div class="feature-item__wrap">
+              <div class="feature-item">
+                <div class="feature-item__icon">
+                  <!-- begin icon-minus -->
+                  <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-minus">
+                    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM4 7v2h8V7zm0 0" />
+                  </svg>
+                  <!-- end icon-minus -->
+                </div>
+                <div class="feature-item__text">Полезный инструмент развития креативной личности теперь на полках вашего магазина;</div>
+              </div>
             </div>
             <!-- end feature-item -->
             <!-- begin feature-item -->
-            <div class="feature-item">
-              <div class="feature-item__icon"></div>
-              <div class="feature-item__text">Качественный и долговечный подарок обязательно заставит вернуться ваших клиентов снова. </div>
+            <div class="feature-item__wrap">
+              <div class="feature-item">
+                <div class="feature-item__icon">
+                  <!-- begin icon-minus -->
+                  <svg height="1em" viewBox="0 0 16 16" width="1.000em" class="icon icon-minus">
+                    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM4 7v2h8V7zm0 0" />
+                  </svg>
+                  <!-- end icon-minus -->
+                </div>
+                <div class="feature-item__text">Качественный и долговечный подарок обязательно заставит вернуться ваших клиентов снова. </div>
+              </div>
             </div>
             <!-- end feature-item -->
           </div>
@@ -312,11 +362,27 @@
       </section>
       <!-- end section -->
       <!-- begin section -->
-      <section class="section section--center">
+      <section class="section s-become-partner section--center pt-lg pb-md">
+        <div class="wave wave--top">
+          <!-- begin icon-wave-country -->
+          <svg viewBox="0 0 132.33891 10.306836" preserveAspectRatio="none" height="1em" width="12.840em" class="icon icon-wave-country">
+            <path d="M132.339 2.307C92.65-5.693 39.687 10.153 0 4.291l.047 6.016H132.34z" />
+          </svg>
+          <!-- end icon-wave-country -->
+        </div>
+        <div class="wave wave--bottom">
+          <!-- begin icon-wave-country -->
+          <svg viewBox="0 0 132.33891 10.306836" preserveAspectRatio="none" height="1em" width="12.840em" class="icon icon-wave-country">
+            <path d="M132.339 2.307C92.65-5.693 39.687 10.153 0 4.291l.047 6.016H132.34z" />
+          </svg>
+          <!-- end icon-wave-country -->
+        </div>
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <div class="section--center__img"></div>
+              <div class="section--center__img section--center__img-simple">
+                <img data-src="img/partners/man.jpg" alt="" class="js-lazy">
+              </div>
             </div>
             <div class="col-sm-6">
               <div class="section--center__block">
@@ -329,6 +395,30 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section -->
+      <!-- begin section -->
+      <section class="section s-sertificate mt-sm pb-md">
+        <div class="container">
+          <div class="section__title title-under">
+            <h2 class="h2">Мы - официальный производитель!</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-4 offset-md-4">
+              <div class="section__subttl text--sm">Компания «JacTak» основана в 1999 году и является официальным брендом в Украине</div>
+            </div>
+            <div class="col-lg-10 offset-lg-1">
+              <img data-src="img/partners/certificate.png" alt="" class="js-lazy">
+            </div>
+          </div>
+        </div>
+        <div class="section__parallax js-parallax-scene">
+          <div class="section__parallax-scene" data-depth="0.1">
+            <i class="section-icon ic ic-comet"></i>
+            <i class="section-icon section-icon--bottom-left ic ic-star4"></i>
+            <i class="section-icon section-icon--top-right ic ic-star4"></i>
           </div>
         </div>
       </section>
