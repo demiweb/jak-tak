@@ -4,18 +4,18 @@ form = [
   { name: 'input', type: 'email', placeholder: 'E-mail' },
   { name: 'input', type: 'tel', placeholder: 'Телефон' },
   { name: 'input', type: 'text', placeholder: 'Название торговой площади' },
-  { name: 'textarea', type: '', placeholder: 'Комментарий', mod: 'textarea--input' }
+  { name: 'textarea', type: '', placeholder: 'Комментарий', mod: 'textarea--input', fieldClass: 'js-textarea' }
 ]
 %}
 
 
 <!-- begin section -->
-<section class="section s-partners-form pt-md pb-xl section--white js-lazy">
+<section class="section s-partners-form pt-md pb-xl section--white js-lazy" data-background-image="img/partners/bg-form.jpg">
   <div class="container">
     <div class="section__breadcrumbs">
       {{ mixins.list(
         name = 'breadcrumbs',
-        modifications = { wrap: '', item: '', link: '' },
+        modifications = { wrap: 'breadcrumbs--white', item: '', link: '' },
         list = [
           { item: '', link: 'Главная' },
           { item: '-', link: '' },
@@ -30,7 +30,7 @@ form = [
 
     <div class="s-partners-form__form">
       <!-- begin form -->
-      <div class="form form--center">
+      <div class="form form--center form--lg">
         <form>
           <div class="form__title title-under title-under--green-lighten">
             <h3 class="h3">Хотите стать нашим партнером?</h3>
@@ -56,7 +56,7 @@ form = [
               title = 'Стать партнером',
               mod = '',
               href = false
-            ) }}`
+            ) }}
           </div>
         </form>
       </div>

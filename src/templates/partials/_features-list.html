@@ -19,11 +19,15 @@ featuresList = [
 <div class="features-list">
   {% for i in featuresList %}
   <!-- begin feature-item -->
-  <div class="feature-item">
-    <div class="feature-item__icon"></div>
+  <div class="feature-item__wrap">
+    <div class="feature-item">
+      <div class="feature-item__icon">
+        {{ mixins.icon('minus') }}
+      </div>
 
-    <div class="feature-item__text">{{ i.text }}</div>
-  </div>
+      <div class="feature-item__text">{{ i.text }}</div>
+    </div>
+  </div>  
   <!-- end feature-item -->
   {% endfor %}
 </div>

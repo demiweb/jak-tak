@@ -92,6 +92,9 @@ h1, h2, h3, h4, h5, h6
   &--yellow
     +before
       background-color: $yellow
+  &--purple-accent
+    +before
+      background-color: $purple-accent
   &--inherit
     +before
       background-color: currentColor
@@ -113,3 +116,7 @@ h1, h2, h3, h4, h5, h6
     pointer-events: none
     +sm
       display: none
+
+.text
+  &--sm
+    font-size: $fz-sm

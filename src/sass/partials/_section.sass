@@ -49,8 +49,14 @@
     z-index: 0
     pointer-events: none
     overflow: hidden
+    +xs
+      display: none
   &__parallax-scene
     +coverdiv
+  &__breadcrumbs
+    margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
 
   &--white
     color: $white
@@ -72,6 +78,9 @@
         margin-bottom: 15px
       img[data-loaded="true"]
         margin-left: -10%
+    &__img-simple
+      img[data-loaded="true"]
+        margin-left: 0
   &--center-full
     +flex(center, normal, column)
 
@@ -455,3 +464,68 @@
     +cover
     background-position: 100% 100%
     background-size: auto
+
+.s-partners-form
+  background-color: $purple
+  &__title
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__form
+    max-width: 585px
+    margin-left: auto
+    margin-right: auto
+
+.s-become-partner
+  background-color: $brown-light
+  +xs
+    padding-top: $padding-md
+    padding-bottom: $padding-md
+  &.section
+    &--center
+      min-height: 0
+  .section--center__block
+    +flex(center, normal, column)
+    height: 100%
+  .section--center__img
+    +xs
+      display: none
+  .wave
+    width: 100%
+    .icon
+      width: 100%
+      // height: 150px
+      fill: $white
+      height: 100px
+      +lg
+        height: 70px
+      +md
+        height: 40px
+    &--top
+      top: 0
+      transform: scaleY(-1)
+      // height: 100px
+      // +lg
+      //   height: 70px
+      // +md
+      //   height: 40px
+    &--bottom
+      bottom: 0
+      transform: scaleX(-1)
+      z-index: 2
+
+.s-sertificate
+  .section-icon
+    &.ic-comet
+      top: 50%
+      left: 5%
+    &--bottom-left
+      bottom: 10%
+      left: 4%
+    &--top-right
+      top: 50%
+      right: 10%

@@ -9,6 +9,7 @@ import setGallery from './components/setGallery';
 import setCounter from './components/setCounter';
 import rotateImage from './components/rotateImage';
 import setSelects from './components/setSelects';
+import setTextareaAutoHeight from './components/setTextareaAutoHeight';
 
 $(function() {
   // sayHello();
@@ -22,4 +23,5 @@ $(function() {
   setCounter();
   rotateImage();
   setSelects();
+  setTextareaAutoHeight();
 });
