@@ -30,8 +30,20 @@
       margin-bottom: 30px
     +md
       margin-bottom: 15px
+  &__btn
+    +notlast
+      margin-bottom: 20px
+      +lg
+        margin-bottom: 15px
+      +sm
+        margin-bottom: 10px
+  &__bottom
+    font-size: $fz-xs
+    color: $gray-light
 
   &--center
     text-align: center
   &--lg
     padding: 65px 50px 55px
+  &--no-shadow
+    box-shadow: none

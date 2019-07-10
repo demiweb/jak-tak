@@ -1,0 +1,59 @@
+{% set name = 'order' %}
+{% set mod = 'popup--form' %}
+
+{% if popup.order %}
+  {% set active = true %}
+{% endif %}
+
+{%set
+form = [
+  { name: 'input', type: 'text', placeholder: 'Имя' },
+  { name: 'input', type: 'email', placeholder: 'E-mail' },
+  { name: 'input', type: 'tel', placeholder: 'Телефон' },
+  { name: 'input', type: 'text', placeholder: 'Количество игрушек' }
+]
+%}
+
+{% extends "layouts/_popup.html" %}
+
+{% block content %}
+
+  <!-- begin form -->
+  <div class="form form--no-shadow">
+    <form>
+      <div class="form__title title-under">
+        <h2 class="h2">Оставьте заявку</h2>
+      </div>
+
+      <div class="form__subttl text--sm">Оставьте ниже ваши контактные данные. Мы позвоним вам в ближайшее время</div>
+
+      {% for i in form %}
+      <div class="form__field">
+        {{ mixins.input(
+          name = i.name,
+          mod = '',
+          type = i.type,
+          placeholder = i.placeholder,
+          value = '',
+          fieldClass = i.fieldClass
+        ) }}
+      </div>
+      {% endfor %}
+
+      <div class="form__btn">
+        {{ mixins.btn(
+          title = 'Оставить заявку',
+          mod = '',
+          href = false
+        ) }}
+      </div>
+
+      <div class="form__bottom">
+        {{ mixins.icon('lock') }}
+        Ваши контактные данные не будут переданы третьим лицам
+      </div>
+    </form>
+  </div>
+  <!-- end form -->
+
+{% endblock %}

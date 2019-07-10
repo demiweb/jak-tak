@@ -80,6 +80,8 @@ export default function toggleMenu() {
 
   $DOC.on('click', (e) => {
     const $menu = $(e.target).closest('.js-menu');
+    if ($(e.target).closest('.js-popup-open').length > 0) return;
+
     if (window.matchMedia('(max-width: 1199px)').matches) {
       if ($(e.target).is($('.js-menu')) || $(e.target).is($menu.find('.js-close'))) {
         burger.close();

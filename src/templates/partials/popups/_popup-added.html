@@ -1,0 +1,30 @@
+{% set name = 'added' %}
+{% if popup.added %}
+  {% set active = true %}
+{% endif %}
+
+{% extends "layouts/_popup.html" %}
+
+{% block content %}
+
+  <div class="popup__title">
+    <h2 class="h2">Товар добавлен в корзину!</h2>
+  </div>
+  <div class="popup__subttl text--sm">Вы добавили 4 товара</div>
+
+  <div class="popup__btns">
+    <div class="popup__btn">
+      {{ mixins.btn(
+        title = 'Продолжить покупки',
+        mod = 'btn--lg btn--lg-full btn--transp'
+      ) }}
+    </div>
+    <div class="popup__btn">
+      {{ mixins.btn(
+        title = 'Оформить заказ',
+        mod = 'btn--lg btn--lg-full'
+      ) }}
+    </div>
+  </div>
+
+{% endblock %}

@@ -11,3 +11,6 @@ PageList:
 - file: france.html
 - file: cart.html
 - file: partners.html
+- file: popup-added.html
+- file: popup-order.html
+- file: thank-you.html

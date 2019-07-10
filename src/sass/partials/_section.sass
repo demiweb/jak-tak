@@ -84,7 +84,6 @@
   &--center-full
     +flex(center, normal, column)
 
-
 .section-icon
   position: absolute
   z-index: 0
@@ -117,7 +116,6 @@
       height: 90%
       +r(565)
         max-height: none
-
 
 .s-info-sm
   +sm
@@ -376,7 +374,6 @@
       margin-bottom: 20vh
     +sm
       margin-bottom: 10vh
-  
 
 .s-country-slider
   padding-top: 250px
@@ -529,3 +526,57 @@
     &--top-right
       top: 50%
       right: 10%
+
+.s-thank-you
+  background-repeat: no-repeat
+  background-position: 0% 100%
+  background-size: auto
+  background-color: $purple-light
+  position: relative
+  +flex(center, center)
+  padding-top: 15%
+  padding-bottom: 15%
+  +xl
+    background-size: 30%
+  .section-icon
+    &.ic-comet
+      top: 20%
+      right: 10%
+    &.ic-star4
+      top: 50%
+      right: 5%
+  &__block
+    text-align: center
+  &__subttl
+    margin-bottom: 50px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__social
+    margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__btns
+    +flex(flex-start, center, column)
+    color: $purple-lighten
+    font-size: 16px
+    .link
+      margin-bottom: 10px
+    .btn
+      margin-top: 10px
+  &__img
+    position: absolute
+    z-index: 0
+    bottom: 0
+    right: 5%
+    text-align: right
+    +xl
+      right: 0
+      img
+        max-width: 75%
+    +sm
+      display: none
+

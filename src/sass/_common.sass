@@ -20,48 +20,6 @@ input, textarea, button
 .bg-contain
   background-size: contain
 
-.pt-xl
-  padding-top: $padding-xl
-  +lg
-    padding-top: $padding-lg
-  +md
-    padding-top: $padding-md
-  +sm
-    padding-top: $padding-sm
-.pt-lg
-  padding-top: $padding-lg
-  +md
-    padding-top: $padding-md
-  +sm
-    padding-top: $padding-sm
-.pt-md
-  padding-top: $padding-md
-  +sm
-    padding-top: $padding-sm
-.pt-sm
-  padding-top: $padding-sm
-
-.pb-xl
-  padding-bottom: $padding-xl
-  +lg
-    padding-bottom: $padding-lg
-  +md
-    padding-bottom: $padding-md
-  +sm
-    padding-bottom: $padding-sm
-.pb-lg
-  padding-bottom: $padding-lg
-  +md
-    padding-bottom: $padding-md
-  +sm
-    padding-bottom: $padding-sm
-.pb-md
-  padding-bottom: $padding-md
-  +sm
-    padding-bottom: $padding-sm
-.pb-sm
-  padding-bottom: $padding-sm
-
 .icon
   display: inline-block
   fill: currentColor
@@ -92,7 +50,6 @@ input, textarea, button
       height: $header-height-lg - 20px
     +md
       height: $header-height-md - 20px
-
 
 .phones
   +xl
@@ -214,3 +171,8 @@ input, textarea, button
   small
     +css-lock(21, 31, 320, 1199, font-size)
     display: block
+
+.link
+  text-decoration: underline
+  font-size: $fz-sm
+  color: $white

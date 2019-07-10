@@ -10,6 +10,7 @@ import setCounter from './components/setCounter';
 import rotateImage from './components/rotateImage';
 import setSelects from './components/setSelects';
 import setTextareaAutoHeight from './components/setTextareaAutoHeight';
+import setPopups from './components/setPopups';
 
 $(function() {
   // sayHello();
@@ -24,4 +25,5 @@ $(function() {
   rotateImage();
   setSelects();
   setTextareaAutoHeight();
+  setPopups();
 });

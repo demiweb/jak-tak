@@ -19,6 +19,10 @@ export default function setSelects() {
     };
 
     const sel = new Select(select, options[name]);
+    sel.onClose = select => {
+      const $panel = $(select).find('.custom-select__panel');
+      $panel.removeClass('is-above');
+    };
     sel.init();
 
     // elements
