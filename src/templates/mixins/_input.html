@@ -19,7 +19,7 @@
 
   {% elseif name === 'select' %}
 
-  <select {% if fieldClass %}class="{{ fieldClass }}"{% endif %} {% for attr, attr_value in fieldAttributes %} {{ attr }}="{{ attr_value }}" {% endfor %}>
+  <select {% if type %}data-type="{{ type }}"{% endif %} {% if fieldClass %}class="{{ fieldClass }}"{% endif %} {% for attr, attr_value in fieldAttributes %} {{ attr }}="{{ attr_value }}" {% endfor %}>
     {% for i in options %}
     <option value="{{ i.value }}" {% for attr, attr_value in i.attributes %} {{ attr }}="{{ attr_value }}" {% endfor %}>{{ i.option }}</option>
     {% endfor %}

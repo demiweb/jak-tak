@@ -1,0 +1,67 @@
+{%set
+form = [
+  { name: 'input', type: 'text', placeholder: 'Имя' },
+  { name: 'input', type: 'email', placeholder: 'E-mail' },
+  { name: 'input', type: 'tel', placeholder: 'Телефон' },
+  { name: 'input', type: 'text', placeholder: 'Название торговой площади' },
+  { name: 'textarea', type: '', placeholder: 'Комментарий', mod: 'textarea--input', fieldClass: 'js-textarea' }
+]
+%}
+
+
+<!-- begin section -->
+<section class="section s-partners-form pt-md pb-xl section--white js-lazy" data-background-image="img/partners/bg-form.jpg">
+  <div class="container">
+    <div class="section__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: 'breadcrumbs--white', item: '', link: '' },
+        list = [
+          { item: '', link: 'Главная' },
+          { item: '-', link: '' },
+          { item: '', link: 'Корзина', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <div class="s-partners-form__title">
+      <h2 class="h2">Партнерство</h2>
+    </div>
+
+    <div class="s-partners-form__form">
+      <!-- begin form -->
+      <div class="form form--center form--lg">
+        <form>
+          <div class="form__title title-under title-under--green-lighten">
+            <h3 class="h3">Хотите стать нашим партнером?</h3>
+          </div>
+
+          <div class="form__subttl text--sm">Оставьте ваши контактные данные и мы свяжемся с вами в ближайшее время</div>
+
+          {% for i in form %}
+          <div class="form__field">
+            {{ mixins.input(
+              name = i.name,
+              mod = i.mod,
+              type = i.type,
+              placeholder = i.placeholder,
+              value = '',
+              fieldClass = i.fieldClass
+            ) }}
+          </div>
+          {% endfor %}
+
+          <div class="form__btn">
+            {{ mixins.btn(
+              title = 'Стать партнером',
+              mod = '',
+              href = false
+            ) }}
+          </div>
+        </form>
+      </div>
+      <!-- end form -->
+    </div>
+  </div>
+</section>
+<!-- end section -->

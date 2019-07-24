@@ -1,0 +1,42 @@
+{%set
+slider = [
+  { img: '1.jpg' },
+  { img: '1.jpg' },
+  { img: '1.jpg' },
+  { img: '1.jpg' },
+  { img: '1.jpg' },
+  { img: '1.jpg' }
+]
+%}
+
+<!-- begin gallery -->
+<div class="gallery">
+  <div class="gallery__slider">
+    <!-- begin slider -->
+    <div class="slider__wrap slider--gallery__wrap">
+      <div class="swiper-container js-slider" data-slider="gallery">
+        <div class="swiper-wrapper slider slider--gallery js-lightgallery">
+          {% for i in slider %}
+          <!-- begin slide -->
+          <a
+            href="img/countries/slider/{{ i.img }}"
+            class="swiper-slide slide" 
+            data-exthumbimage="img/countries/slider/{{ i.img }}">
+            <span class="slide__img js-lazy" data-background-image="img/countries/slider/{{ i.img }}"></span>
+          </a>
+          <!-- end slide -->
+          {% endfor %}
+        </div>
+      </div>
+
+      <button class="slider__prev slider__prev-purple slider__prev-sm js-prev"></button>
+      <button class="slider__next slider__next-purple slider__prev-sm js-next"></button>
+    </div>
+    <!-- end slider -->
+  </div>
+
+  <div class="gallery__spinner">
+    <div class="spinner js-spinner" data-width="" data-height="" data-source="img/rotate360/rad_zoom_{frame}.jpg" data-frame="[1, 34]"></div>
+  </div>
+</div>
+<!-- end gallery -->

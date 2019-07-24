@@ -4,14 +4,70 @@
     display: inline-block
     +notlast
       margin-right: 20px
-    .icon
-      font-size: 21px
-      vertical-align: middle
-    .icon-youtube
-      font-size: $fz-lg
-
   a
     display: block
     +tr(color .3s)
+    font-size: 21px
     +hover
       color: $accent
+  .icon
+    vertical-align: middle
+  .icon-youtube
+    font-size: 1.65em
+
+  &--lg
+    color: $purple-lighten
+    a
+      font-size: 40px
+      +sm
+        font-size: 30px
+      +hover
+        color: $white
+    li
+      margin-left: 15px
+      margin-right: 15px
+      +sm
+      +notlast
+        margin-left: 15px
+        margin-right: 15px
+        +sm
+
+.social-block  
+  position: relative  
+  color: $purple-lighten  
+  &__inner
+    min-width: 450px
+    margin-left: auto
+    margin-right: auto
+    +flex(center, center)
+    border-radius: $radius
+    padding-top: 45px
+    padding-bottom: 45px
+    padding-left: 10px
+    padding-right: 10px
+    border: 2px solid  $purple-lighten
+    +lg
+      padding-top: 35px
+      padding-bottom: 35px
+      min-width: 400px
+    +xs
+      min-width: 0
+  &__title
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: $purple-light
+    padding-left: 35px
+    padding-right: 35px
+    white-space: nowrap
+    +lg
+      padding-left: 20px
+      padding-right: 20px
+    +xs
+      position: static
+      transform: translate(0, 0)
+      margin-bottom: 10px
+      background-color: transparent
+      padding: 0
+    

@@ -1,0 +1,84 @@
+.select
+
+.custom-select
+  $this: &
+  font-size: $fz-sm
+  color: $gray-light
+  position: relative
+  select
+    position: absolute
+    opacity: 0
+    visibility: hidden
+  &.is-open
+    #{$this}__panel
+      max-height: 300px
+      overflow: auto
+      opacity: 1
+      padding-top: 15px
+      padding-bottom: 15px
+    #{$this}__opener
+      +before
+        transform: translate(0, -50%) rotate(-225deg)
+  &__panel
+    position: absolute
+    z-index: 1
+    top: 100%
+    left: 0
+    width: 100%
+    max-height: 0
+    overflow: hidden
+    opacity: 0
+    +tr(opacity .3s)
+    background-color: $white
+    border-bottom-left-radius: $radius
+    border-bottom-right-radius: $radius
+    box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.12)
+    &.is-above
+      top: auto
+      bottom: 100%
+      border-radius: 0
+      border-top-left-radius: $radius
+      border-top-right-radius: $radius
+  &__option
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 5px
+    padding-bottom: 5px
+    +tr(color .3s)
+    cursor: pointer
+    position: relative
+    +hover
+      color: $accent
+      text-decoration: underline
+    &[data-value="placeholder"]
+      display: none
+  &__opener
+    line-height: 1.8
+    height: 30px
+    border-bottom: 1px solid  $gray-light
+    +tr(border-color .3s)
+    width: 100%
+    
+    position: relative
+    cursor: pointer
+    +before
+      +icon-arrow(8, 8, 1, currentColor, -45)
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translate(0, -50%) rotate(-45deg)
+      +tr(transform .3s)
+  &__option-icon
+    // position: absolute
+    // top: 50%
+    // transform: translate(0, -50%)
+    width: 35px
+    display: inline-block
+    vertical-align: middle
+    left: 15px
+    font-size: 0
+    .icon
+      font-size: $fz
+    .icon-dhl
+      font-size: 5px
+

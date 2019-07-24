@@ -1,0 +1,56 @@
+<!-- begin section -->
+<section class="section s-travel section--center js-lazy" data-background-image="img/countries/{{ sectionTravel.bg }}">
+  <div class="wave wave--top">
+    {{ mixins.icon('wave-country') }}
+  </div>
+  <div class="wave wave--bottom">
+    {{ mixins.icon('wave-country') }}
+  </div>
+
+  <div class="container">
+    <div class="section__title s-travel__title title-under">
+      <h2 class="h2">
+        {% if sectionTravel.title %}
+        {{ sectionTravel.title | safe }}
+        {% else %}
+        С сувениром {{ mixins.title() }} путешествуйте по Украине...
+        {% endif %}
+      </h2>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-6">
+        <div class="section--center__img">
+          <img data-src="img/items-lg/{{ sectionTravel.img }}" alt="" class="js-lazy">
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="section--center__block">
+          <div class="section--center__block-title">
+            <h2 class="h2">
+              Закажите волшебную игрушку {{ mixins.title() }} прямо сейчас!
+            </h2>
+          </div>
+
+          <div class="section--center__subttl">Нажмите на заветную кнопку и закажите свой прямо сейчас</div>
+
+          <div class="section--center__btn">
+            {{ mixins.btn(
+              title = 'Заказать',
+              mod = 'btn--lg'
+            ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section__parallax js-parallax-scene">
+    <div class="section__parallax-scene" data-depth="0.1">
+      <i class="section-icon ic ic-comet"></i>
+      <i class="section-icon ic ic-star4"></i>
+    </div>    
+  </div> 
+</section>
+<!-- end section -->

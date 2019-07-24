@@ -1,0 +1,25 @@
+<!-- begin main -->
+<main class="main">
+  <div class="container">   
+    <div class="main__breadcrumbs">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { item: '', link: 'Главная' },
+          { item: '-', link: '' },
+          { item: '', link: 'Корзина', modLink: 'is-active' }
+        ]
+      ) }}
+    </div>
+
+    <div class="main__title">
+      <h2 class="h2">Корзина</h2>
+    </div>
+
+    {% include "partials/_cart.html" %}
+  </div>
+
+
+</main>
+<!-- end main -->

@@ -1,0 +1,120 @@
+.order
+  background-color: $gray-lighten
+  overflow: hidden
+  +cover
+  background-size: auto
+  background-position: 100% 100%
+  +xs
+    // text-align: center
+  &__left
+    background-color: $white
+    position: relative
+    height: 100%
+    padding: 45px 35px 20px
+    +lg
+      padding: 30px 0 20px
+    +sm
+      margin-left: -15px
+      margin-right: -15px
+      padding-left: 15px
+      padding-right: 15px
+      +before
+        display: none
+    .gallery
+      position: relative
+      z-index: 1
+    +before
+      background-color: $white
+      z-index: 0
+      +coverdiv
+      border: 1px solid  $c-border
+      border-left: 0
+      right: -15px
+      left: auto
+      width: 50vw
+  &__right
+    height: 100%
+    padding-top: 115px
+    padding-left: 45px
+    padding-bottom: 240px
+    +lg
+      padding-top: $padding-lg
+      padding-bottom: $padding-xl
+      padding-left: 0
+    +md
+      padding-top: $padding-md
+    +sm
+      padding-top: $padding-sm
+      padding-bottom: $padding-sm
+  &__title
+    @extend .h1
+    color: $blue-light
+    +flex(flex-start, center)
+    margin-bottom: 35px
+    +md
+      margin-bottom: 15px
+    img
+      height: 1.275em
+    .h1, h1
+      margin-right: .8em
+  &__price-block
+    max-width: 605px
+    margin-bottom: 35px
+    +md
+      margin-bottom: 15px
+  &__meta
+    +flex(flex-start, normal, row, wrap)
+  &__meta-left
+    +lg
+      width: 50%
+    +md
+      width: 100%
+      order: 1
+    +sm
+      width: 50%
+      order: 0
+    +xs
+      width: 100%
+      order: 1
+  &__meta-list
+    flex-grow: 1
+    padding-left: 55px
+    +lg
+      padding-left: 0
+      width: 50%
+      flex-grow: initial
+    +md
+      width: 100%
+      margin-bottom: 15px
+      order: 0
+    +sm
+      width: 50%
+      order: 1
+    +xs
+      width: 100%
+      order: 0
+      margin-bottom: 5px
+  &__price
+    display: inline-block
+    vertical-align: middle
+    margin-bottom: 30px
+    +lg
+      width: 100%
+    +md
+      margin-bottom: 15px
+    +xs
+      margin-bottom: 10px
+  &__counter
+    display: inline-block
+    vertical-align: middle
+    margin-right: 30px
+    margin-bottom: 30px
+    +lg
+      width: 100%
+      margin-right: 0
+    +md
+      margin-bottom: 15px
+    +xs
+      margin-bottom: 10px
+  &__links
+    margin-bottom: -50px

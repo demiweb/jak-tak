@@ -16,7 +16,21 @@
     padding: 10px 50px
   +sm
     font-size: $fz-ssm
+    padding-left: 25px
+    padding-right: 25px
 
+  &--transp
+    background-color: transparent
+    color: $accent
+    +hover
+      background-color: $accent
+      color: $white
+  &--transp-white
+    background-color: transparent
+    border-color: $white
+    +hover
+      background-color: $white
+      color: $purple
   &--transp-purple
     background-color: transparent
     color: $purple
@@ -38,6 +52,18 @@
     +lg
       padding-left: 30px
       padding-right: 30px
+  &--lg
+    min-width: 295px
+    padding-left: 10px
+    padding-right: 10px
+    +sm
+      min-width: 0
+  &--lg-full
+    +sm
+      min-width: 295px
+    +xs
+      min-width: 0
+      width: 100%
 
 .btn-link
   +reg

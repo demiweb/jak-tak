@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6
 .h2, h2
   font-size: 32px
   font-weight: 700
+  line-height: 1.2
   +css-lock(21, 32, 320, 1199, font-size)
 
   &--accent
@@ -40,12 +41,29 @@ h1, h2, h3, h4, h5, h6
 .h3, h3
   font-size: $fz-lg
   font-weight: 700
+  line-height: 1.2
 
 .h4, h4
 
 .h5, h5
 
 .h6, h6
+
+.title
+  font-weight: 700
+  text-transform: uppercase
+  small
+    font-size: $fz-sm
+    font-weight: 300
+    +sm
+      font-size: $fz-xs
+    +xs
+      font-size: 11px
+  &--lg
+    // font-size: 60px
+    +css-lock(24, 60, 320, 1199, font-size)
+  &--md
+    +css-lock(21, 45, 320, 1199, font-size)
 
 .title-under
   position: relative
@@ -74,6 +92,12 @@ h1, h2, h3, h4, h5, h6
   &--yellow
     +before
       background-color: $yellow
+  &--purple-accent
+    +before
+      background-color: $purple-accent
+  &--inherit
+    +before
+      background-color: currentColor
 
 .title-bg
   color: $white  
@@ -92,3 +116,7 @@ h1, h2, h3, h4, h5, h6
     pointer-events: none
     +sm
       display: none
+
+.text
+  &--sm
+    font-size: $fz-sm

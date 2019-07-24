@@ -14,7 +14,13 @@ links = [
 <section class="section pt-md pb-md">
   <div class="container">
     <div class="section__title title-under">
-      <h2 class="h2">Выберите свою головоломку {{ mixins.title() }}! </h2>
+      <h2 class="h2">
+        {% if sectionLinks.title %}
+        {{ sectionLinks.title | safe }}
+        {% else %}
+        Выберите свою головоломку {{ mixins.title() }}! 
+        {% endif %}
+      </h2>
     </div>
   </div>
 

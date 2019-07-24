@@ -1,4 +1,5 @@
 .section
+  $this: &
   +cover
   position: relative
   .container
@@ -11,6 +12,14 @@
       margin-bottom: 15px
   &__title-mb-lg
     margin-bottom: 70px
+    +lg
+      margin-bottom: 50px
+    +md
+      margin-bottom: 40px
+    +sm
+      margin-bottom: 30px
+    +xs
+      margin-bottom: 15px
   &__subttl
     text-align: center
     margin-bottom: 45px
@@ -35,9 +44,45 @@
   &__list-title
     font-weight: 700
     margin-bottom: 15px
+  &__parallax
+    +coverdiv
+    z-index: 0
+    pointer-events: none
+    overflow: hidden
+    +xs
+      display: none
+  &__parallax-scene
+    +coverdiv
+  &__breadcrumbs
+    margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
 
   &--white
     color: $white
+  &--center
+    min-height: 100vh
+    +md
+      min-height: 75vh  
+    &__block-title
+      margin-bottom: 20px
+      +md
+        margin-bottom: 10px
+    &__subttl
+      margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+    &__img
+      overflow: hidden
+      +xs
+        margin-bottom: 15px
+      img[data-loaded="true"]
+        margin-left: -10%
+    &__img-simple
+      img[data-loaded="true"]
+        margin-left: 0
+  &--center-full
+    +flex(center, normal, column)
 
 .section-icon
   position: absolute
@@ -55,12 +100,23 @@
     top: 7%
     left: 8%
     +r(565)
-      max-height: 64px
+      height: 65%
+      // max-height: 64px
   &--left
     max-width: 565px
     padding-top: 420px
     +r(565)
       padding-top: 75%
+  &--right
+    // padding-top: 380px
+    padding-top: 55%
+    img, iframe
+      width: 88.4%
+      left: 5.8%
+      top: 2%
+      height: 90%
+      +r(565)
+        max-height: none
 
 .s-info-sm
   +sm
@@ -130,6 +186,8 @@
     overflow: hidden
     max-height: 100vh
     background-color: $purple-accent
+    +rmix(1399, 750)
+      max-height: 800px
     +md
       padding-top: 50px
       max-height: 500px
@@ -155,12 +213,16 @@
     &--top
       left: 0
       top: 0
-      height: 80px
+      height: 50px
+      +md
+        height: 25px
     &--bottom
       bottom: -1px
-      height: 90px
+      height: 50px
+      +sm
+        height: $padding-sm
     &--middle
-      top: 100%
+      top: calc(100% - 2px)
       left: 0
       z-index: 1
       height: 70px
@@ -179,8 +241,10 @@
     +md
       padding-top: $padding-md
       background-image: none !important
+      padding-bottom: $padding-md
     +sm
       padding-top: $padding-sm
+      padding-bottom: $padding-sm
   &__bottom
     +cover
     color: $white
@@ -190,13 +254,17 @@
     margin-bottom: 10px
   &__list-title-lg
     margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 15px
   &__list
     margin-bottom: 25px
 
 .s-app
   &__tv
     // max-width: 565px
-    padding-top: 380px
+    
     margin-bottom: 50px
   &__title
     margin-bottom: 20px
@@ -207,11 +275,17 @@
     font-size: 0
     margin-left: 5px
     margin-right: 5px
+  &__text
+    +md
+      margin-bottom: 15px
 
 .s-order-sm
   &__img
     margin-left: -40%
     pointer-events: none
+    +xs
+      margin-left: -20%
+      padding-top: 25px
   &__title
     margin-bottom: 5px
   &__comet
@@ -226,4 +300,286 @@
   &__star-right-top
     right: 50px
     top: $padding-md
+
+.s-video-how
+  padding-top: 140px
+  padding-bottom: 100px
+  margin-bottom: $padding-md
+  +lg
+    padding-top: $padding-lg
+  +md
+    padding-top: $padding-md
+    padding-bottom: $padding-md
+  .wave
+    width: 100%
+    font-size: 0
+    z-index: 0
+    .icon
+      width: 100%
+      height: 70px
+      fill: $white
+      +lg
+        height: 50px
+      +md
+        height: 30px
+    &--top
+      transform: scale(-1)
+      top: 0
+      // .icon
+      //   height: 70px
+    &--bottom
+      bottom: 0
+  &__video
+    position: relative
+    padding-top: 50%
+    margin-bottom: -$padding-lg
+    +md
+      margin-bottom: -$padding-md
+    +xss
+      padding-top: 70%
+    iframe
+      +coverdiv
+      border-radius: $radius
+
+.s-travel  
+  background-color: $brown-light
+  +cover
+  background-size: 100% auto
+  background-position: 50% 100%  
+  .ic-comet
+    top: 20%
+    right: 20%
+  .ic-star4
+    right: 30px
+    top: 35%
+  .wave
+    width: 100%
+    .icon
+      height: 160px
+      width: 100%
+      fill: $white
+      +lg
+        height: 100px
+      +md
+        height: 60px
+      +sm
+        height: 40px
+    &--top
+      transform: scaleY(-1)
+    &--bottom
+      bottom: 0
+      .icon
+        height: 75px
+        transform: scaleX(-1)
+  &__title
+    margin-bottom: 30vh
+    +md
+      margin-bottom: 20vh
+    +sm
+      margin-bottom: 10vh
+
+.s-country-slider
+  padding-top: 250px
+  padding-bottom: 220px
+  +cover
+  background-size: auto
+  background-position: 100% 100%
+  background-color: $brown-lighten
+  +lg
+    // padding-top: $padding-xl
+    padding-top: 200px
+    padding-bottom: $padding-xl
+  +md
+    padding-top: $padding-xl
+    padding-bottom: $padding-lg
+  +xs
+    padding-top: $padding-md
+    padding-bottom: $padding-lg
+  .container
+    position: relative
+    z-index: 2
+  .wave
+    z-index: 1
+    width: 100%
+    .icon
+      fill: $white
+      width: 100%
+      height: $padding-lg
+      +lg
+        height: 60px
+      +md
+        height: 40px
+    &--top
+      top: 0
+      transform: scaleY(-1)
+
+  &__img
+    position: absolute
+    z-index: 1
+    font-size: 0
+    +lg
+      img
+        max-width: 70%
+    +md
+      img
+        max-width: 50%
+    +xs
+      display: none
+  &__img-top-right
+    top: 0
+    right: 0
+    text-align: right
+  &__img-top-left
+    top: 0
+    left: 0
+
+.s-check
+  background-color: $brown
+  position: relative
+  padding-bottom: $padding-lg
+  // overflow: hidden
+  .container
+    z-index: 2
+  .wave
+    width: 100%
+    .icon
+      width: 100%
+      // height: auto
+      height: $padding-lg
+      +lg
+        height: 60px
+      +md
+        height: 40px
+    &--top
+      bottom: 100%
+      transform: scaleX(-1)
+      .icon
+        fill: $brown
+    &--bottom
+      bottom: 0
+      transform: scaleX(-1)
+      // height: $padding-lg
+  &__bg
+    +coverdiv
+    +cover
+    background-position: 100% 100%
+    background-size: auto
+
+.s-partners-form
+  background-color: $purple
+  &__title
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    +sm
+      margin-bottom: 10px
+  &__form
+    max-width: 585px
+    margin-left: auto
+    margin-right: auto
+
+.s-become-partner
+  background-color: $brown-light
+  +xs
+    padding-top: $padding-md
+    padding-bottom: $padding-md
+  &.section
+    &--center
+      min-height: 0
+  .section--center__block
+    +flex(center, normal, column)
+    height: 100%
+  .section--center__img
+    +xs
+      display: none
+  .wave
+    width: 100%
+    .icon
+      width: 100%
+      // height: 150px
+      fill: $white
+      height: 100px
+      +lg
+        height: 70px
+      +md
+        height: 40px
+    &--top
+      top: 0
+      transform: scaleY(-1)
+      // height: 100px
+      // +lg
+      //   height: 70px
+      // +md
+      //   height: 40px
+    &--bottom
+      bottom: 0
+      transform: scaleX(-1)
+      z-index: 2
+
+.s-sertificate
+  .section-icon
+    &.ic-comet
+      top: 50%
+      left: 5%
+    &--bottom-left
+      bottom: 10%
+      left: 4%
+    &--top-right
+      top: 50%
+      right: 10%
+
+.s-thank-you
+  background-repeat: no-repeat
+  background-position: 0% 100%
+  background-size: auto
+  background-color: $purple-light
+  position: relative
+  +flex(center, center)
+  padding-top: 15%
+  padding-bottom: 15%
+  +xl
+    background-size: 30%
+  .section-icon
+    &.ic-comet
+      top: 20%
+      right: 10%
+    &.ic-star4
+      top: 50%
+      right: 5%
+  &__block
+    text-align: center
+  &__subttl
+    margin-bottom: 50px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__social
+    margin-bottom: 30px
+    +lg
+      margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__btns
+    +flex(flex-start, center, column)
+    color: $purple-lighten
+    font-size: 16px
+    .link
+      margin-bottom: 10px
+    .btn
+      margin-top: 10px
+  &__img
+    position: absolute
+    z-index: 0
+    bottom: 0
+    right: 5%
+    text-align: right
+    +xl
+      right: 0
+      img
+        max-width: 75%
+    +sm
+      display: none
 

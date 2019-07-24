@@ -4,6 +4,7 @@
     <div class="container">
       <div class="header__inner">
         <div class="header__logo">
+          {%set logoMod = 'logo--header' %}
           {% include "partials/_logo.html" %}
         </div>
 
@@ -32,6 +33,7 @@
               <div class="lang__title">Ru</div>
               <div class="lang__list">
                 <a href="#" class="lang__link">Ua</a>
+                <a href="#" class="lang__link">En</a>
               </div>
             </div>
             <!-- end lang -->            
@@ -57,7 +59,13 @@
   <div class="header__bottom js-header-contacts">
     <div class="container">
       <div class="header__inner">
-        <div class="header__title">Широкие возможности для игры и творчества</div>
+        <div class="header__title">
+          {% if header.title %}
+          {{ header.title }}
+          {% else %}
+          Широкие возможности для игры и творчества
+          {% endif %}
+        </div>
 
         <div class="header__btns">
           {{ mixins.btn(

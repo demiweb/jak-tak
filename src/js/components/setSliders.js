@@ -41,10 +41,41 @@ export default function setSliders() {
           nextEl: next,
           prevEl: prev
         },
+        breakpoints: {
+          1200: {
+            spaceBetween: 15,
+          },
+          992: {
+            slidesPerView: 1
+          }
+        },
         on: {
           init: setLazy
         }
-      }
+      },
+      gallery: {
+        slidesPerView: 3,
+        loop: true,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: next,
+          prevEl: prev
+        },
+        breakpoints: {
+          992: {
+            spaceBetween: 5
+          },
+          768: {
+            spaceBetween: 20
+          },
+          576: {
+            spaceBetween: 5
+          }
+        },
+        on: {
+          init: setLazy
+        }
+      },
     };
 
     // $(slider).slick(options[name]);

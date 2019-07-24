@@ -38,17 +38,21 @@
       z-index: 1
 
   &--footer
-    color: $gray-darken
+    +lg
+      text-align: left
     ul
       display: block
     li
       display: block
       +notlast
         margin-bottom: 20px
+        +sm
+          margin-bottom: 10px
     a
       padding: 0
       font-size: $fz-sm
       font-weight: 300
+      display: inline
       +hover
         color: $accent
   &--sm

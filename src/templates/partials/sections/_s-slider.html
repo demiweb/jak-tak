@@ -7,27 +7,9 @@
 
     <div class="section__subttl">Посмотрите на наших героев! </div>
 
-    <!-- begin slider -->
-    <div class="slider__wrap slider--center__wrap">
-      <div class="swiper-container js-slider" data-slider="center">
-        <div class="slider slider--center swiper-wrapper">
-          {% for i in range(0, 5) %}
-          <!-- begin slide -->
-          <div class="slide swiper-slide">
-            <div class="slide__img js-lazy" data-background-image="img/slider/1.jpg"></div>
-          </div>
-          <!-- end slide -->
-          {% endfor %}
-        </div>
-        
-      </div>
+    {% include "partials/sliders/_slider-center.html" %}
 
-      <button class="slider__prev js-prev"></button>
-        <button class="slider__next js-next"></button>
-
-      
-    </div>
-    <!-- end slider -->
+    
   </div>
 </section>
 <!-- end section -->

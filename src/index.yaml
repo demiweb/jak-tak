@@ -2,3 +2,15 @@ ProjectTitle: jak-tak
 
 PageList:
 - file: home.html
+- file: usa.html
+- file: ukraine.html
+- file: spain.html
+- file: poland.html
+- file: italy.html
+- file: germany.html
+- file: france.html
+- file: cart.html
+- file: partners.html
+- file: popup-added.html
+- file: popup-order.html
+- file: thank-you.html

@@ -1,0 +1,9 @@
+<!-- begin popup -->
+<div class="popup{% if mod %} {{ mod }}{% endif %} js-popup{% if active %} is-active{% endif %}" data-popup="{{ name }}">
+  <div class="popup__inner">
+    <a href="#" class="popup__close js-popup-close"></a>
+
+    {% block content %}{% endblock %}
+  </div>
+</div>
+<!-- end popup -->

@@ -5,6 +5,7 @@
     border-bottom: 1px solid  $gray-light
     +tr(border-color .3s)
     width: 100%
+    color: $gray-light
     &:focus
       border-color: $accent
     +placeholder
@@ -12,6 +13,7 @@
 
 .textarea
   textarea
+    font-size: $fz-sm
     border: 1px solid  $gray-light
     resize: none
     padding: 15px
@@ -23,3 +25,48 @@
       border-color: $accent
     +placeholder
       color: $gray-light
+
+  &--input
+    font-size: 0
+    textarea
+      border: 0
+      border-bottom: 1px solid  $gray-light
+      min-height: 0
+      min-height: 30px
+      height: 30px
+      border-radius: 0
+      padding: 0
+      padding-top: 5px
+      overflow: hidden
+
+
+.inputs
+  +flex(flex-start, normal, row, wrap)
+  margin-left: -25px
+  margin-right: -25px
+  +xl
+    margin-left: -15px
+    margin-right: -15px
+  +sm
+    margin-left: -10px
+    margin-right: -10px
+  +xs
+    margin-left: 0
+    margin-right: 0
+  &__field
+    width: 33.33333%
+    padding-left: 25px
+    padding-right: 25px
+    margin-bottom: 30px
+    +xl
+      padding-left: 15px
+      padding-right: 15px
+    +md
+      margin-bottom: 15px
+    +sm
+      padding-left: 10px
+      padding-right: 10px
+    +xs
+      padding-left: 0
+      padding-right: 0
+      width: 100%

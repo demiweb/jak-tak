@@ -37,6 +37,18 @@
   &__next-simple
     background-color: transparent
     color: $c-text
+  &__prev-purple,
+  &__next-purple
+    background-color: $purple
+  &__prev-sm,
+  &__next-sm
+    width: 25px
+    height: 25px
+    +before
+      width: 8px
+      height: 8px
+      +vcenter
+      transform: translate(-35%, -50%) rotate(45deg)
 
 
   &--center
@@ -73,15 +85,37 @@
   &--testimonials
     &__wrap
       #{$this}__prev
-        left: -70px
+        // left: -70px
+        left: -10%
+        +xs
+          left: 0
       #{$this}__next
-        right: -70px
+        // right: -70px
+        right: -10%
+        +xs
+          right: 0
+  &--gallery
+    .slide
+      &__img
+        padding-top: 100%
+        border-radius: $radius
+    &__wrap
+      max-width: 500px
+      margin-left: auto
+      margin-right: auto
+      .swiper-container
+        max-width: 400px
+        margin-left: auto
+        margin-right: auto
+    
 
 
 
 .slide
+  display: block
   &__img
     padding-top: 60%
+    display: block
     +cover
     position: relative
     +md

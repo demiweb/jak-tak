@@ -3,22 +3,44 @@
   color: $white
   position: relative
   margin-bottom: 125px
-
+  +lg
+    margin-bottom: 100px
+  +md
+    margin-bottom: 75px
+  +sm
+    padding: $padding-sm 0
+    margin-bottom: 0
   &__cards
     +flex(flex-start, center)
     padding-top: $padding-lg
+    +sm
+      padding-top: 0
+      display: block
   &__block
     height: 100vh
     +flex(center, normal, column)
     position: relative
+    +sm
+      display: block
+      height: auto
+      margin-bottom: 15px
   &__arrow
       position: absolute
       top: 25px
       right: calc(100% + 70px)
+      +lg
+        right: calc(100% + 15px)
+      +md
+        display: none
   &__block-right
     // text-align: right
-    max-width: 375px
-    margin-left: auto
+    // max-width: 375px
+    // margin-left: auto
+    padding-left: 50%
+    +lg
+      padding-left: 30%
+    +md
+      padding-left: 0
   &__block-in
     position: relative
   &__bg
@@ -28,20 +50,28 @@
     z-index: 0
     top: 0
     bottom: 0
+    +sm
+      display: none 
   &__title
     margin-bottom: 15px
   &__form
     height: 100%
     +flex(flex-end, center)
+    +sm
+      display: block
   &__left
     position: absolute
     left: 0
     top: 20px
     bottom: 20px
     width: 60%
-    z-index: -1
+    z-index: 0
     +cover
     background-position: 50% 0
+    +md
+      background-position: 30% 0
+    +sm
+      display: none
 
   
   &--price
@@ -53,11 +83,17 @@
       right: 0
       width: 35%
       z-index: 0
+      +lg
+        width: 60%
+      +sm
+        width: 100%
     #{$this}__bg
       right: 0
       width: 50%
       // background-size: contain
       background-position: 0 50%
+      +lg
+        width: 75%
 
   &--form
     +before
@@ -68,17 +104,30 @@
       left: 0
       width: 55%
       z-index: 0
+      +lg
+        width: 50%
+      +sm
+        width: 100%
     #{$this}__bg
       left: 0
       width: 70%
       // background-size: contain
       background-position: 100% 50%
+      +lg
+        width: 75%
     #{$this}__arrow
       right: auto
       left: calc(100% + 150px)
       top: 20px
-    #{$this}__block-in
-      max-width: 350px
+      +lg
+        left: calc(100% + 15px)
+    #{$this}__block
+      // max-width: 350px
+      padding-right: 50%
+      +lg
+        padding-right: 30%
+      +md
+        padding-right: 0
 
   &--contacts
     +before
@@ -89,21 +138,32 @@
       right: 0
       width: 35%
       z-index: 0
+      +lg
+        width: 60%
+      +sm
+        width: 100%
     .cloud
       top: 20px
-      right: 30%
+      left: 30%
       position: absolute
+      width: 35%
+      height: 50%
+      max-height: 265px
+      +lg
+        display: none
     #{$this}__bg
       right: 0
       width: 50%
       z-index: 1
       // background-size: contain
       background-position: 0 50%
+      +lg
+        width: 75%
     #{$this}__arrow
       right: calc(100% + 40px)
       top: 15px
     #{$this}__block-in
-      max-width: 330px
+      // max-width: 330px
     #{$this}__left
       z-index: 0
 

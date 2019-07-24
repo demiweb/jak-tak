@@ -1,0 +1,19 @@
+{%set
+prices = [
+  { title: '1 - 9 шт.', price: '12 евро' },
+  { title: '10 - 49 шт.', price: '10 евро' },
+  { title: '50 - 99 шт.', price: '8 евро' },
+  { title: 'от 100 шт.', price: '6 евро' }
+]
+%}
+
+<!-- begin price-block -->
+<div class="price-block">
+  {% for i in prices %}
+  <div class="price-block__col">
+    <div class="price-block__title">{{ i.title }}</div>
+    <div class="price-block__price">{{ i.price }}</div>
+  </div>
+  {% endfor %}
+</div>
+<!-- end price-block -->

@@ -16,6 +16,10 @@
   @media only screen and (min-height: $height + "px")
     @content
 
+=rmix($width, $height)
+  @media only screen and (max-width: $width + "px") and (max-height: $height + "px")
+    @content
+
 @mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px)
   #{$property}: #{$max-size}#{$unit}
   #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})))

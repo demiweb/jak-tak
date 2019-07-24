@@ -1,0 +1,63 @@
+<!-- begin order -->
+<section class="order js-lazy" data-background-image="img/countries/{{ order.img }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 order-1 order-md-0">
+        <div class="order__left">
+         {% include "partials/_gallery.html" %}
+        </div>        
+      </div>
+
+      <div class="col-md-7 order-0 order-md-1">
+        <div class="order__right">
+          <div class="order__title">
+            <h1 class="h1 h1--lg">{{ order.title }}</h1>
+            <img data-src="img/flags/{{ order.flag }}" alt="" class="js-lazy">
+          </div>
+
+          <div class="order__price-block">
+           {% include "partials/_price-block.html" %}
+          </div>
+
+          <div class="order__meta">
+            <div class="order__meta-left">
+              <div class="order__counter">
+                <!-- begin counter -->
+                <div class="counter js-counter">
+                  <button class="js-counter-increase">-</button>
+                  <input type="text" value="1">
+                  <button class="js-counter-decrease">+</button>
+                </div>
+                <!-- end counter -->
+              </div>
+
+              <div class="order__price price"><small>Итого: </small>27200 грн</div>
+
+              <div class="order__btn">
+                {{ mixins.btn(
+                  title = 'Оформить покупку',
+                  mod = ''
+                ) }}
+              </div>
+            </div>
+
+            <div class="order__meta-list">
+              {{ mixins.list(
+                name = 'info-list',
+                modifications = { wrap: '', item: '', link: '' },
+                descr = true,
+                list = [
+                  { dt: 'Высота:', dd: '80 мм' },
+                  { dt: 'Ширина:', dd: '80 мм' },
+                  { dt: 'Материал:', dd: 'Ольха, Древесина' },
+                  { dt: 'Вес:', dd: '250 г.' }
+                ]
+              ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+<!-- end order -->

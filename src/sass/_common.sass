@@ -10,55 +10,15 @@ body
   +sm
     font-size: $fz-sm
 
-input, textarea
+input, textarea, button
   font-family: inherit
+  color: inherit
+  font-size: inherit
   +placeholder
     font-family: inherit
 
 .bg-contain
   background-size: contain
-
-.pt-xl
-  padding-top: $padding-xl
-  +lg
-    padding-top: $padding-lg
-  +md
-    padding-top: $padding-md
-  +sm
-    padding-top: $padding-sm
-.pt-lg
-  padding-top: $padding-lg
-  +md
-    padding-top: $padding-md
-  +sm
-    padding-top: $padding-sm
-.pt-md
-  padding-top: $padding-md
-  +sm
-    padding-top: $padding-sm
-.pt-sm
-  padding-top: $padding-sm
-
-.pb-xl
-  padding-bottom: $padding-xl
-  +lg
-    padding-bottom: $padding-lg
-  +md
-    padding-bottom: $padding-md
-  +sm
-    padding-bottom: $padding-sm
-.pb-lg
-  padding-bottom: $padding-lg
-  +md
-    padding-bottom: $padding-md
-  +sm
-    padding-bottom: $padding-sm
-.pb-md
-  padding-bottom: $padding-md
-  +sm
-    padding-bottom: $padding-sm
-.pb-sm
-  padding-bottom: $padding-sm
 
 .icon
   display: inline-block
@@ -66,7 +26,7 @@ input, textarea
   font-size: inherit
 
 .out
-  overflow: hidden
+  // overflow: hidden
   padding-top: $header-height * 2
   +lg
     padding-top: $header-height-lg * 2
@@ -81,15 +41,15 @@ input, textarea
   margin-right: auto
 
 .logo
-  display: block
+  display: inline-block
   font-size: 0
-  img
-      max-height: 100%
-  +lg
-    height: $header-height-lg - 20px
-  +md
-    height: $header-height-md - 20px
-
+  &--header
+    img
+        max-height: 100%
+    +lg
+      height: $header-height-lg - 20px
+    +md
+      height: $header-height-md - 20px
 
 .phones
   +xl
@@ -127,12 +87,12 @@ input, textarea
   +pfr
   color: $accent
   font-size: 25px
+  +css-lock(17, 25, 992, 1199, font-size)
   width: 300px
   height: 265px
   +cover
   background-size: contain
   +flex(center, center)
-  mix-blend-mode: normal
   &__title
     text-align: center
     // padding-left: 30px
@@ -153,6 +113,66 @@ input, textarea
     .icon
       fill: $accent
       font-size: 35px
+      +xs
+        font-size: 20px
 
+.counter
+  color: $gray
+  font-size: 0
+  input, button
+    display: inline-block
+    vertical-align: top
+  input
+    width: 60px
+    height: 37px
+    border: 1px solid  $c-border
+    font-size: $fz
+    padding-left: 5px
+    padding-right: 5px
+    text-align: center
+  button
+    background-color: $white
+    font-size: $fz
+    height: 37px
+    width: 35px
+    border: 1px solid  $c-border
+    // +inline-flex(center, center)
+    line-height: 35px
+    font-size: $fz-lg
+    font-weight: 100
+    &:first-child
+      border-top-left-radius: 30px
+      border-bottom-left-radius: 30px
+    &:last-child
+      border-top-right-radius: 30px
+      border-bottom-right-radius: 30px
 
+.price
+  @extend .h2
+  color: $yellow
+  +sm
+    small
+      font: $fz-sm
+  small
+    font-size: $fz
+    color: $gray
 
+.section-cursive-text
+  +ability
+  +css-lock(45, 85, 320, 1199, font-size)
+  color: $gray-dark
+  position: absolute
+  z-index: 1
+  right: 100px
+  top: 60px
+  +rotate(-30)
+  text-align: center
+  line-height: 1
+  small
+    +css-lock(21, 31, 320, 1199, font-size)
+    display: block
+
+.link
+  text-decoration: underline
+  font-size: $fz-sm
+  color: $white

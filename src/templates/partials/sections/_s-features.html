@@ -12,13 +12,35 @@ features = [
 %}
 
 <!-- begin section -->
-<section class="section s-features pt-sm pb-md">
+<section class="section s-features{% if sectionFeatures.mod %} {{ sectionFeatures.mod }}{% else %} pt-sm pb-md{% endif %}">
   <div class="container">
+    {% if sectionFeatures.titleShort %}
+    <div class="row">
+      <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+        <div class="section__title title-under">
+          {% if sectionFeatures.title %}
+          <h2 class="h2">{{ sectionFeatures.title | safe }}</h2>
+          {% else %}
+          <h2 class="h1 h1--accent h1--ttu">Новинка!!! </h2>
+          <h2 class="h2">Игрушка головоломка-сувенир {{ mixins.title() }} <div class="title-bg"><img data-src="img/bg-title.png" alt="" class="js-lazy"> <span>с дополненной реальностью</span></div></h2>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% else %}
     <div class="section__title title-under">
+      {% if sectionFeatures.title %}
+      <h2 class="h2">{{ sectionFeatures.title | safe }}</h2>
+      {% else %}
       <h2 class="h1 h1--accent h1--ttu">Новинка!!! </h2>
       <h2 class="h2">Игрушка головоломка-сувенир {{ mixins.title() }} <div class="title-bg"><img data-src="img/bg-title.png" alt="" class="js-lazy"> <span>с дополненной реальностью</span></div></h2>
+      {% endif %}
     </div>
+    {% endif %}
+
+    {% if not sectionFeatures.subttlNone %}
     <div class="section__subttl">Уникальное сочетание Hand Made и современных технологий</div>
+    {% endif %}    
 
     <div class="section__features">
       <!-- begin features -->
@@ -39,7 +61,11 @@ features = [
     </div>
   </div>
 
-  <i class="section-icon ic ic-comet"></i>
-  <i class="section-icon ic ic-star2"></i>
+  <div class="section__parallax js-parallax-scene">
+    <div class="section__parallax-scene" data-depth="0.1">
+      <i class="section-icon ic ic-comet"></i>
+      <i class="section-icon ic ic-star2"></i>
+    </div>    
+  </div>  
 </section>
 <!-- end section -->

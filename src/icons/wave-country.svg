@@ -7,9 +7,10 @@
    xmlns="http://www.w3.org/2000/svg"
    id="svg8"
    version="1.1"
-   viewBox="0 0 132.55893 13.002016"
-   height="13.002016mm"
-   width="132.55893mm">
+   viewBox="0 0 132.33891 10.306836"
+   preserveAspectRatio="none"
+   height="10.306836mm"
+   width="132.33891mm">
   <defs
      id="defs2" />
   <metadata
@@ -25,11 +26,11 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-12.473213,-51.499297)"
+     transform="translate(-31.372022,-149.92807)"
      id="layer1">
     <path
-       d="m 12.473213,53.268957 c 43.963813,-4.62372 40.887513,0.905869 132.558937,4.155287 l -0.26727,7.077069 H 12.473213 Z"
-       style="fill:#ffffff;stroke:none;stroke-width:0.17239183;fill-opacity:1"
+       d="m 163.71094,152.23506 c -39.6875,-7.99986 -92.651418,7.84607 -132.338918,1.98438 l 0.0472,6.01547 H 163.71094 Z"
+       
        id="path815" />
   </g>
 </svg>

@@ -1,0 +1,66 @@
+---
+title: germany
+page: germany
+header: {
+  title: 'Добро пожаловать в Германию!'
+}
+order: {
+  img: 'bg-order-germany.jpg',
+  title: 'Германия',
+  flag: 'germany.jpg'
+}
+links: [
+  { btn: true, img: 'Italy-2-min.png', title: 'Италия' },
+  { btn: true, img: 'Poland-2-min.png', title: 'Польша' },
+  { btn: true, img: 'Ukraine-2-min.png', title: 'Украина' },
+  { btn: true, img: '2.png', title: 'США' },
+  { btn: true, img: 'Germany-2-min.png', title: 'Германия' },
+  { btn: true, img: 'France-1-min.png', title: 'Франция' },
+  { btn: true, img: 'Spain-2-min.png', title: 'Испания' }
+]
+linksMod: 'item-links--top'
+sectionVideo: {
+  img: 'bg-video-germany.jpg'
+}
+sectionTravel: {
+  bg: 'bg-travel-germany.jpg',
+  title: 'С сувениром <strong class="tm tm--inherit">«JakTak<sup>&reg;</sup>»</strong> путешествуйте по Германии...',
+  img: 'germany.png'
+}
+sectionFeatures: {
+  title: 'Вы становитесь владельцем не просто игрушки или сувенира',
+  mod: 'pt-md pb-lg',
+  subttlNone: true,
+  titleShort: true
+}
+sectionSlider: {
+  img: 'bg-slider-germany.jpg',
+  title: 'Вы уже почувствовали атмосферу Германии?',
+  imgSmTopRight: 'food-germany.png',
+  imgSmTopLeft: 'photo-germany.png'
+}
+sectionCheck: {
+  bg: 'bg-check-germany.jpg',
+  img: 'germany-2.png',
+  cursive: 'Berlin <small>Be Berlin</small>'
+}
+sectionLinks: {
+  title: 'Не упустите другие головоломки <strong class="tm">«JakTak<sup>&reg;</sup>»</strong>! '
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_country-hero.html" %}
+  {% include "partials/_links.html" %}
+  {% include "partials/sections/_s-video-how.html" %}
+  {% include "partials/sections/_s-travel.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-country-slider.html" %}
+  {% include "partials/sections/_s-country-check.html" %}
+
+  {% set linksMod = false %}
+  {% include "partials/sections/_s-item-links.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}

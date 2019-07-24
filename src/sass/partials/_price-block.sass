@@ -1,0 +1,50 @@
+.price-block
+  +flex()
+  border: 1px solid  $c-border
+  border-radius: $radius
+  +xs
+    display: block
+  &__col
+    width: 25%
+    +flex(center, center, column)
+    background-color: $white
+    border-right: 1px solid  $c-border
+    padding-top: 30px
+    padding-bottom: 30px
+    padding-left: 10px
+    padding-right: 10px
+    +lg
+      padding-top: 20px
+      padding-bottom: 20px
+    +md
+      padding-top: 10px
+      padding-bottom: 10px
+      padding-left: 5px
+      padding-right: 5px
+      font-size: $fz-sm
+    +xs
+      width: auto
+      border: 0
+    &:first-child
+      border-top-left-radius: $radius
+      border-bottom-left-radius: $radius
+      +xs
+        border-radius: 0
+        border-top-left-radius: $radius
+        border-top-right-radius: $radius
+    &:last-child
+      border-top-right-radius: $radius
+      border-bottom-right-radius: $radius
+      border-right: 0
+      +xs
+        border-radius: 0
+        border-bottom-left-radius: $radius
+        border-bottom-right-radius: $radius
+  &__title
+    color: $gray
+    margin-bottom: 10px
+    +md
+      margin-bottom: 5px
+  &__price
+    font-weight: 700
+    color: $yellow

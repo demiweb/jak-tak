@@ -3,24 +3,55 @@
   padding-top: 75px
   padding-bottom: 45px
   color: $gray
+  +lg
+    padding-top: 60px
+  +md
+    padding-top: $padding-md
+    padding-bottom: $padding-md
+  +sm
+    padding-top: $padding-sm
+    padding-bottom: $padding-sm
   &__logo
     padding-left: 40px
     margin-bottom: 15px
+    +sm
+      text-align: center
+      padding-left: 0
+  &__block
+    +md
+      margin-bottom: 15px
   &__descr
     font-size: $fz-xs
     margin-bottom: 25px
     max-width: 270px
+    +sm
+      max-width: none
+      margin-bottom: 15px
   &__auth
     font-size: $fz-xs
     a
       display: inline-block
       vertical-align: middle
   &__title
-    color: $gray-darken
+    color: $c-text
     margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 20px
+    +sm
+      margin-bottom: 15px
+    +xs
+      font-size: 18px
+      h2, .h2
+        font-size: 18px
   &__copy
     padding-top: 60px
     text-align: center
     font-size: $fz-xs
+    +lg
+      padding-top: 40px
+    +md
+      padding-top: 30px
     span
       color: $accent

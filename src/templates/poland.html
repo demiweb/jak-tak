@@ -1,0 +1,66 @@
+---
+title: poland
+page: poland
+header: {
+  title: 'Добро пожаловать в Польшу!'
+}
+order: {
+  img: 'bg-order-poland.jpg',
+  title: 'Польша',
+  flag: 'poland.jpg'
+}
+links: [
+  { btn: true, img: 'Italy-2-min.png', title: 'Италия' },
+  { btn: true, img: 'Poland-2-min.png', title: 'Польша' },
+  { btn: true, img: 'Ukraine-2-min.png', title: 'Украина' },
+  { btn: true, img: '2.png', title: 'США' },
+  { btn: true, img: 'Germany-2-min.png', title: 'Германия' },
+  { btn: true, img: 'France-1-min.png', title: 'Франция' },
+  { btn: true, img: 'Spain-2-min.png', title: 'Испания' }
+]
+linksMod: 'item-links--top'
+sectionVideo: {
+  img: 'bg-video-poland.jpg'
+}
+sectionTravel: {
+  bg: 'bg-travel-poland.jpg',
+  title: 'С сувениром <strong class="tm tm--inherit">«JakTak<sup>&reg;</sup>»</strong> путешествуйте по Польше...',
+  img: 'poland.png'
+}
+sectionFeatures: {
+  title: 'Вы становитесь владельцем не просто игрушки или сувенира',
+  mod: 'pt-md pb-lg',
+  subttlNone: true,
+  titleShort: true
+}
+sectionSlider: {
+  img: 'bg-slider-poland.jpg',
+  title: 'Вы уже почувствовали атмосферу Польши?',
+  imgSmTopRight: 'food-poland.png',
+  imgSmTopLeft: 'photo-poland.png'
+}
+sectionCheck: {
+  bg: 'bg-check-poland.jpg',
+  img: 'poland-2.png',
+  cursive: 'Warsaw <small>God, Honor,<br> Fatherland</small>'
+}
+sectionLinks: {
+  title: 'Не упустите другие головоломки <strong class="tm">«JakTak<sup>&reg;</sup>»</strong>! '
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_header.html" %}
+  {% include "partials/_country-hero.html" %}
+  {% include "partials/_links.html" %}
+  {% include "partials/sections/_s-video-how.html" %}
+  {% include "partials/sections/_s-travel.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-country-slider.html" %}
+  {% include "partials/sections/_s-country-check.html" %}
+
+  {% set linksMod = false %}
+  {% include "partials/sections/_s-item-links.html" %}
+  {% include "partials/_footer.html" %}
+{% endblock %}
